@@ -54,3 +54,131 @@ body {
     
 }
 
+/* НАчало первого блока */
+
+.gallery {
+    margin: 0,auto;
+    max-width: 1920px;
+    place-items: center;
+}
+
+h1.gallery__title {
+    max-width: 1600px;
+    font-size: 2em; 
+    color: #5a5a5a; 
+    text-align: center;
+    font-family: El Messiri;
+    font-weight: 300;
+}
+
+h1.gallery__title:before {
+    content: '';
+    display: block;
+    height: 1px; 
+    background: #f66d52; 
+    width: 150px; 
+    margin: 0 auto 10px; 
+	transition: 1s; 
+}
+h1.gallery__title:hover:before {
+    width: 250px; 
+	transition: ease-out 1s; 
+}
+
+h1.gallery__title:after {
+    content: '';
+    display: block;
+    height: 1px; 
+    background: #f66d52; 
+    width: 150px; 
+    margin: 10px auto 0; 
+	transition: 1s; 
+}
+h1.gallery__title:hover:after {
+    width: 250px; 
+	transition: ease-out 1s; }
+     
+
+.h1{
+
+  max-width: 1600px;
+
+
+}
+
+
+
+.gallery__cards {
+    display: grid;
+    height: fit-content;
+    padding:3%;
+    max-width: 1200;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;   
+  background-color: $accent-color;
+ 
+
+}
+ .gallery__img :hover {
+    
+        filter: grayscale(0%); 
+
+        
+    }
+
+.gallery__cards-one {position: relative;
+  grid-area: 1/1/3/3; 
+  object-fit: cover;
+    
+
+}
+.gallery__cards-two {
+  grid-area: 1/3/2/4;
+  object-fit: cover;
+}
+
+  .gallery__cards-three {
+ grid-area: 1/4/2/5;
+ object-fit: cover;
+  
+  }
+
+  .gallery__cards-four {
+    grid-area: 2/3/3/4;
+    object-fit: cover;
+    }
+
+  .gallery__cards-five {
+     grid-area: 2/4/3/5;
+ object-fit: cover;
+  }
+
+.gallery__cards-title {
+  color:blanchedalmond;
+  font-weight: 400;
+  transition: all 0.2s;
+  left: 20px;
+  margin-bottom: 30px; }
+
+h2 :hover {
+  color: #3a7999;
+  box-shadow: inset 0 0 0 3px #3a7999;
+}
+.gallery__img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+    border-radius: 3%; 
+      filter: grayscale(50%); 
+}
+.gallery__img:hover {
+    
+        filter: grayscale(0%);
+        
+    }
+
+    /* Конец первого блока */
+
+
