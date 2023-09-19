@@ -56,7 +56,7 @@ body a:hover {
   padding-right: 16px;
 }
 
-/* НАчало первого блока */
+/* Начало первого блока */
 .gallery {
   margin: 0, auto;
   max-width: 1920px;
@@ -68,14 +68,16 @@ h1.gallery__title {
   font-size: 2em;
   color: #5a5a5a;
   text-align: center;
-  font-family: El Messiri;
-  font-weight: 300;
+  padding-left: 8%;
+  font-family: "Roboto", sans-serif;
+  font-weight: 200;
+  cursor: pointer;
 }
 
 h1.gallery__title:before {
   content: "";
   display: block;
-  height: 1px;
+  height: 2px;
   background: #f66d52;
   width: 150px;
   margin: 0 auto 10px;
@@ -92,7 +94,7 @@ h1.gallery__title:hover:before {
 h1.gallery__title:after {
   content: "";
   display: block;
-  height: 1px;
+  height: 2px;
   background: #f66d52;
   width: 150px;
   margin: 10px auto 0;
@@ -115,17 +117,12 @@ h1.gallery__title:hover:after {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  padding: 3%;
+  padding: 2%;
   max-width: 1200;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 20px;
-  background-color: #f1ad0c;
-}
-
-.gallery__img :hover {
-  -webkit-filter: grayscale(0%);
-          filter: grayscale(0%);
+  background-color: rgba(225, 221, 221, 0.91);
 }
 
 .gallery__cards-one {
@@ -136,46 +133,50 @@ h1.gallery__title:hover:after {
 }
 
 .gallery__cards-two {
+  position: relative;
   grid-area: 1/3/2/4;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
 .gallery__cards-three {
+  position: relative;
   grid-area: 1/4/2/5;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
 .gallery__cards-four {
+  position: relative;
   grid-area: 2/3/3/4;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
 .gallery__cards-five {
+  position: relative;
   grid-area: 2/4/3/5;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
 .gallery__cards-title {
-  color: blanchedalmond;
-  font-weight: 400;
+  position: absolute;
+  background-color: aliceblue;
+  bottom: 20px;
+  left: 20px;
+  font-weight: 600;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
-  left: 20px;
-  margin-bottom: 30px;
+  z-index: 1;
 }
 
-h2 :hover {
-  color: #3a7999;
-  -webkit-box-shadow: inset 0 0 0 3px #3a7999;
-          box-shadow: inset 0 0 0 3px #3a7999;
+.gallery__title a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .gallery__img {
-  position: relative;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -183,6 +184,8 @@ h2 :hover {
   border-radius: 3%;
   -webkit-filter: grayscale(50%);
           filter: grayscale(50%);
+  border-style: solid;
+  border-color: #f66d52;
 }
 
 .gallery__img:hover {
