@@ -52,13 +52,13 @@
         <h3>Театральная студия</h3> <!-- можно будет переделать в ссылку -->
         <p>Открыт набор желающих во взрослую группу для новичков. В программе: основы актерского мастерства, словесное
           действие, репетиции и участие в театрализованных постановках, участие в социально-значимых проектах.</p>
-      </div>
       <div class="curse__1">
         <img src="" alt="">
         <h3>Творческие занятия сдетьми</h3>
         <p>Организовываем творческие занятие с деть после показа. Занятия направлены на закрепление и осмысления
           просмотренного материала, как нравственного, так и эстетического.</p>
       </div>
+
       <div class="curse__1">
         <img src="" alt="">
         <h3>"Артём. Культура. Волонтёр".</h3>
@@ -68,9 +68,84 @@
       </div>
     </section>
     <!-- конец 4-го блока Курсы -->
+      <!-- начало Блока 1-->
+           <section class="gallery">     
+            <h1 class="gallery__title">Наши мероприятия</h1> 
+                <div class="gallery__cards">
+              <div class="gallery__cards-one">
+                      <img class="gallery__img" src="/assets/images/Brodsky2.jpg" alt="">
+                    <h2 class="gallery__cards-title"><a href="#">Hello</a>
+                   </h2>
+                </div> 
+                    <div class="gallery__cards-two">
+                      <img class="gallery__img" src="/assets/images/MakeUp.jpg" alt="">
+                   <h2 class="gallery__cards-title"><a href="#">Hello</a>
+                   </span>
+                </div> 
+                    <div class="gallery__cards-three">
+                       <img class="gallery__img" src="/assets/images/Teatr-studija.jpg" alt="">
+                    <h2 class="gallery__cards-title"><a href="#">Hello</a>
+                   </h2>
+                </div> 
+                    <div class="gallery__cards-four">
+                       <img class="gallery__img" src="/assets/images/Skazka-zovet2.jpg" alt="">
+                    <h2 class="gallery__cards-title"><a href="#">Hello</a>
+                    </h2>
+                </div>
+             <div class="gallery__cards-five">
+                       <img class="gallery__img" src="/assets/images/Volonteer.jpg" alt="">
+                   <h2 class="gallery__cards-title"><a href="#">Hello</a>
+                   </h2>
+                </div> 
+                    </div>
+        </section>
+        <!--Конец блока  1-->
 
-  </main>
-  <footer></footer>
-</body>
+         <!--начало формы Отзыва-->
+         <section class="form">
+         <form class="form__decor">
+<div class="form__form-inner">
+<h3>Оставьте отзыв</h3>
+<input type="text" placeholder="Ваше Имя">
+<input type="email" placeholder="Ваш E-mail">
+<textarea placeholder="Сообщение..." rows="3"></textarea>
 
+<div class="form__items">
+  <div class="item">
+    <form action="">
+      <label for="checkbox">
+      <div id="check" class="check" >
+        <i id="fas" class="fas fa-check"></i>
+      </div>
+        <input type="checkbox" id="checkbox">
+      <label>
+    </form>
+    </div>
+   <div class="item">
+     <p>
+       Регистрируясь в системе, я принимаю<br>
+       <a href="#">Условия соглашения</a>,<a href="#">Политики конфиденциальности</a><br>
+       и даю согласие на <a href="#">обработку персональных данных.</a>
+     </p>
+  </div>
+</div>
+
+<script>
+var check = document.getElementById("check");
+var fas = document.getElementById("fas");
+  
+  check.onclick = function (){
+    this.classList.toggle("checked");
+    fas.classList.toggle("active");
+  }
+</script>
+<input type="submit" value="Отправить">
+</div>
+</form>
+         </section>
+         <!--конец формы Отзыва--->
+    </main>
+    <footer></footer>
+  </body>
 </html>
+
