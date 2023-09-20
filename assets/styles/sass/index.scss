@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap');
 
 
-
 @import "variables.scss";
 
 body {
@@ -34,10 +33,9 @@ body {
 
     .header__logo {
         text-align: center;
-
-        img {
-            width: 80px;
-            height: 80px;
+        
+        img{
+            height: 100px;
             justify-content: center;
         }
 
@@ -47,6 +45,48 @@ body {
 
         }
     }
+        ul{
+            @extend %flex-element-row;  
+        }
+        li{
+            padding-right: 60px;
+
+            .header__nav-dropdown{
+                    position: relative;
+                    display: inline-block;
+            &:hover{
+                    
+                    .header__nav-link-content{
+                        display: block;
+                    }
+                }
+            }
+            .header__nav-link-content{
+                display: none;
+                position: absolute;
+                margin-bottom: 16px;
+                // background-color: #f1f1f1;
+                min-width: 160px;
+                // box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                // z-index: 1;
+                
+                & a{
+                    color: $accent-color;
+                    padding-top: 20px;
+                    text-decoration: none;
+                    display: block;
+                    
+                    &:hover{
+                    color: #ebd9af;
+                    }
+                    }
+                }
+            }
+
+    }      
+    
+
+=======
 
     ul {
         @extend %flex-element-row;
@@ -309,4 +349,5 @@ padding: 30px;
 .p {
     font-size: small;
 }
+
 
