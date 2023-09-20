@@ -9,49 +9,64 @@ body {
     font-size: $font-size-text;
     max-width: 1920px;
     margin: 0 auto;
-    li{
+
+    li {
         list-style-type: none;
     }
-    a{
+
+    a {
         text-decoration-line: none;
-        &:hover{
+
+        &:hover {
             color: $accent-color;
         }
     }
 }
 
-.header{
+.header {
     @extend %flex-element-row;
     padding-top: 35px;
     align-items: center;
-    p{
+
+    p {
         color: $primary-color;
     }
 
-    .header__logo{
+    .header__logo {
         text-align: center;
-        
-        img{
+
+        img {
             width: 80px;
             height: 80px;
             justify-content: center;
         }
-        span{
+
+        span {
             font-size: $font-size-title;
             font-weight: 900;
-            
+
         }
     }
-        ul{
+
+    ul {
         @extend %flex-element-row;
-            
-            
-        }
-        li{
-            padding-right: 16px;
-        }
-        
-    
+
+
+    }
+
+    li {
+        padding-right: 16px;
+    }
+
+
+}
+
+// начало 4-го блока Курсы
+
+.curses__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 /* Начало первого блока */
@@ -294,3 +309,4 @@ padding: 30px;
 .p {
     font-size: small;
 }
+
