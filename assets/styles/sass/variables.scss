@@ -11,3 +11,18 @@ $font-size-title: 27px;
     flex-direction: row;
     justify-content: space-between;
 }
+
+%flex-elemnt-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+%img_broder {
+    object-fit: cover;
+    border-radius: 3%;
+    filter: grayscale(50%);
+    border-style: solid;
+    border-color: #f66d52
+}

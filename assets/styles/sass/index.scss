@@ -5,43 +5,47 @@
 @import "variables.scss";
 
 body {
-    font-family: $font-family;
-    font-size: $font-size-text;
-    max-width: 1920px;
-    margin: 0 auto;
-    padding-left: 16px;
-    padding-right: 16px;
+  font-family: $font-family;
+  font-size: $font-size-text;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding-left: 16px;
+  padding-right: 16px;
 
-    &:hover {
-      color: $accent-color;
-    li{
-        list-style-type: none;
+  &:hover {
+    color: $accent-color;
+
+    li {
+      list-style-type: none;
     }
-    a{
-        text-decoration-line: none;
-        &:hover{
-            color: $accent-color;
-        }
+
+    a {
+      text-decoration-line: none;
+
+      &:hover {
+        color: $accent-color;
+      }
     }
   }
 }
 
-.header{
-    @extend %flex-element-row;
-    padding-top: 35px;
-    align-items: center;
-    p{
-        color: $primary-color;
-    }
+.header {
+  @extend %flex-element-row;
+  padding-top: 35px;
+  align-items: center;
 
-    .header__logo{
-        text-align: center;
-        
-        img{
-            width: 80px;
-            height: 80px;
-            justify-content: center;
-        }
+  p {
+    color: $primary-color;
+  }
+
+  .header__logo {
+    text-align: center;
+
+    img {
+      width: 80px;
+      height: 80px;
+      justify-content: center;
+    }
 
 
     span {
@@ -49,53 +53,57 @@ body {
       font-weight: 900;
 
     }
-    }
-    ul{
-            @extend %flex-element-row;  
+  }
+
+  ul {
+    @extend %flex-element-row;
+  }
+
+  li {
+    padding-right: 60px;
+
+    .header__nav-dropdown {
+      position: relative;
+      display: inline-block;
+
+      &:hover {
+
+        .header__nav-link-content {
+          display: block;
         }
-    li{
-            padding-right: 60px;
+      }
+    }
 
-            .header__nav-dropdown{
-                    position: relative;
-                    display: inline-block;
-            &:hover{
-                    
-                    .header__nav-link-content{
-                        display: block;
-                    }
-                }
-            }
-            .header__nav-link-content{
-                display: none;
-                position: absolute;
-                margin-bottom: 16px;
-                min-width: 160px;
-        
-                
-                & a{
-                    color: $accent-color;
-                    padding-top: 20px;
-                    text-decoration: none;
-                    display: block;
-                    
-                    &:hover{
-                    color: #ebd9af;
-                    }
-                    }
-                }
-            }
+    .header__nav-link-content {
+      display: none;
+      position: absolute;
+      margin-bottom: 16px;
+      min-width: 160px;
 
-}      
-  
+
+      & a {
+        color: $accent-color;
+        padding-top: 20px;
+        text-decoration: none;
+        display: block;
+
+        &:hover {
+          color: #ebd9af;
+        }
+      }
+    }
+  }
+
+}
+
 
 
 /* Начало первого блока */
 
 .gallery {
-    margin: 0 auto;
-    max-width: 1920px;
-    place-items: center;
+  margin: 0 auto;
+  max-width: 1920px;
+  place-items: center;
 }
 
 h1.gallery__title {
@@ -295,55 +303,56 @@ body {
 }
 
 .check .fas {
-    font-size: 28px;
-    color: #ccc;
-    transform: scale(0.8);
-    transition: 0.24s 0.34s cubic-bezier(0, 0.99, 0.54, 0.33);
-    opacity: 0;
+  font-size: 28px;
+  color: #ccc;
+  transform: scale(0.8);
+  transition: 0.24s 0.34s cubic-bezier(0, 0.99, 0.54, 0.33);
+  opacity: 0;
 }
 
 .checked {
-    border: 2px solid black;
-    animation: blind 0.34s linear;
-    transform: scale(0.9);
-    color: #d87d56;
+  border: 2px solid black;
+  animation: blind 0.34s linear;
+  transform: scale(0.9);
+  color: #d87d56;
 }
 
 @keyframes blind {
-    0% {
-        transform: scale(0.2);
-    }
-    100% {
-        transform: scale(0.9);
-    }
+  0% {
+    transform: scale(0.2);
+  }
+
+  100% {
+    transform: scale(0.9);
+  }
 }
 
 .fas.active {
-    color: $accent-color;
+  color: $accent-color;
 
-    transform: scale(0.8);
+  transform: scale(0.8);
 }
 
 .form__items {
-    display: flex;
-    padding: 20px 20px;
-    color:black;
-    width: 480px;
-    margin: 5%;
-    font-size: small;
+  display: flex;
+  padding: 20px 20px;
+  color: black;
+  width: 480px;
+  margin: 5%;
+  font-size: small;
 
 }
 
 .items a {
-    color: #ffc00f;
+  color: #ffc00f;
 }
 
 .item:nth-of-type(1) {
-    width: 90px;
+  width: 90px;
 }
 
 #checkbox {
-    display: none;
+  display: none;
 }
 
 .p {
@@ -354,9 +363,46 @@ body {
 // начало 4-го блока Курсы
 
 .curses__container {
-    @extend %flex-element-row;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "curse__1 curse__2 curse__3";
+  max-width: 100vw;
+  height: 55vh;
+  margin-top: 100px;
+  margin-bottom: 150px;
+
+  .curse__1 {
+    grid-area: curse__1;
+    @extend %flex-elemnt-column;
+
+    img {
+      max-width: 10vw;
+      @extend %img_broder;
+      max-width: 30vw;
+    }
+  }
+
+  .curse__2 {
+    grid-area: curse__2;
+    @extend %flex-elemnt-column;
+
+    img {
+      max-width: 10vw;
+      @extend %img_broder;
+      max-width: 30vw;
+    }
+  }
+
+  .curse__3 {
+    grid-area: curse__3;
+    @extend %flex-elemnt-column;
+
+    img {
+      max-width: 10vw;
+      @extend %img_broder;
+      max-width: 25vw;
+    }
+  }
 }
-
-
-
-
