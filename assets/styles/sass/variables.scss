@@ -1,12 +1,12 @@
-$primary-color:#000000;
-$secondary-color:#F2F2F2;
+$primary-color: #000000;
+$secondary-color: #F2F2F2;
 $accent-color: #f1ad0c;
 
 $font-family: "Roboto", sans-serif;
 $font-size-text: 21px;
 $font-size-title: 27px;
 
-%flex-element-row{
+%flex-element-row {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
