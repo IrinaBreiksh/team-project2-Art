@@ -6,6 +6,21 @@
   justify-content: space-between;
 }
 
+.curses__container .curse__3, .curses__container .curse__2, .curses__container .curse__1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.curses__container .curse__3 img, .curses__container .curse__2 img, .curses__container .curse__1 img {
+  object-fit: cover;
+  border-radius: 3%;
+  filter: grayscale(50%);
+  border-style: solid;
+  border-color: #f66d52;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   font-size: 21px;
@@ -52,24 +67,27 @@ body a:hover {
   gap: 0px 0px;
   grid-template-areas: "curse__1 curse__2 curse__3";
   max-width: 100vw;
+  height: 55vh;
+  margin-top: 100px;
+  margin-bottom: 150px;
 }
 .curses__container .curse__1 {
   grid-area: curse__1;
 }
 .curses__container .curse__1 img {
-  max-width: 10vw;
+  max-width: 30vw;
 }
 .curses__container .curse__2 {
   grid-area: curse__2;
 }
 .curses__container .curse__2 img {
-  max-width: 10vw;
+  max-width: 30vw;
 }
 .curses__container .curse__3 {
   grid-area: curse__3;
 }
 .curses__container .curse__3 img {
-  max-width: 10vw;
+  max-width: 25vw;
 }
 
 /* Начало первого блока */
