@@ -8,6 +8,8 @@ body {
     font-size: $font-size-text;
     max-width: 1920px;
     margin: 0 auto;
+    padding-left: 16px;
+    padding-right: 16px;
 
     li {
         list-style-type: none;
@@ -84,9 +86,6 @@ body {
             }
 
     }      
-    
-
-=======
 
     ul {
         @extend %flex-element-row;
@@ -99,20 +98,10 @@ body {
     }
 
 
-}
-
-// начало 4-го блока Курсы
-
-.curses__container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
 /* Начало первого блока */
 
 .gallery {
-    margin: 0,auto;
+    margin: 0 auto;
     max-width: 1920px;
     place-items: center;
 }
@@ -295,59 +284,65 @@ padding: 30px;
 }
 
 .check .fas {
-  font-size: 28px;
-  color: #ccc;
-  transform: scale(0.8);
-  transition: 0.24s 0.34s cubic-bezier(0, 0.99, 0.54, 0.33);
-  opacity: 0;
+    font-size: 28px;
+    color: #ccc;
+    transform: scale(0.8);
+    transition: 0.24s 0.34s cubic-bezier(0, 0.99, 0.54, 0.33);
+    opacity: 0;
 }
 
 .checked {
-  border: 2px solid black;
-  animation: blind 0.34s linear;
-  transform: scale(0.9);
-  color: #d87d56;
+    border: 2px solid black;
+    animation: blind 0.34s linear;
+    transform: scale(0.9);
+    color: #d87d56;
 }
 
 @keyframes blind {
-  0% {
-    transform: scale(0.2);
-  }
-  100% {
-    transform: scale(0.9);
-  }
+    0% {
+        transform: scale(0.2);
+    }
+    100% {
+        transform: scale(0.9);
+    }
 }
 
 .fas.active {
-  color: $accent-color;
+    color: $accent-color;
 
-  transform: scale(0.8);
+    transform: scale(0.8);
 }
 
 .form__items {
-  display: flex;
-  padding: 20px 20px;
-  color:black;
-  width: 480px;
-  margin: 5%;
-  font-size: small;
+    display: flex;
+    padding: 20px 20px;
+    color:black;
+    width: 480px;
+    margin: 5%;
+    font-size: small;
 
 }
 
 .items a {
-  color: #ffc00f;
+    color: #ffc00f;
 }
 
 .item:nth-of-type(1) {
-  width: 90px;
+    width: 90px;
 }
 
 #checkbox {
-  display:none;
+    display: none;
 }
 
 .p {
     font-size: small;
+}
+
+// начало 4-го блока Курсы
+
+.curses__container {
+    @extend %flex-element-row;
 }
 
 
