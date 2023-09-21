@@ -54,10 +54,55 @@ body {
     
 }
 
-
+.about {
+    margin: 5%;
+    max-width: 100%;
+}
+.team {
+    margin: 5%;
+}
 .foto {
     display: grid;
-    grid-template-columns: repeat(5, 100px);
-	gap: 10px;
-	// height: 220px;
+    // grid-template-columns: repeat(5, 200px); 
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    justify-content: space-between;
+    justify-items: stretch;
+	gap: 20px 10px;
+    align-items: center;
+    
+	
+}
+// .card {
+//     margin: 0, auto;
+    
+// }
+.card-img-top {
+    max-width: 200px;
+    max-height: 200px;
+    object-fit: cover;
+    padding-left: 10px;
+
+    
+    
+}
+.card-title {
+    font-family: $font-family;
+    font-size:$font-size-text;
+    text-align: center;
+}
+
+.card-text {
+    font-family: $font-family;
+    font-size: 0.65em;
+    text-align: center;
+
+}
+.title_about {
+    font-family: $font-family;
+    font-size:$font-size-title;
+}
+.text_about {
+    font-family: $font-family;
+    font-size: $font-size-text;
+    text-align: justify;
 }
