@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap");
 .header ul, .header {
   display: flex;
@@ -10,14 +11,19 @@ body {
   font-size: 21px;
   max-width: 1920px;
   margin: 0 auto;
+  padding-left: 16px;
+  padding-right: 16px;
 }
-body li {
+body:hover {
+  color: #f1ad0c;
+}
+body:hover li {
   list-style-type: none;
 }
-body a {
+body:hover a {
   text-decoration-line: none;
 }
-body a:hover {
+body:hover a:hover {
   color: #f1ad0c;
 }
 
