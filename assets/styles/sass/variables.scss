@@ -15,5 +15,13 @@ $font-size-title: 27px;
 %flex-element-column {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
+}
+
+%img-radius {
+    object-fit: cover;
+    border-style: solid;
+    border-color: #f66d52;
+    filter: grayscale(40%);
+    border-radius: 3%;
 }

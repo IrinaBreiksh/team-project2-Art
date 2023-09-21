@@ -367,11 +367,20 @@ body {
 
 
 // начало 4-го блока Курсы
-
 .curses__container {
   @extend %flex-element-column;
+  max-width: 50vw;
+  min-height: 40vw;
+  align-items: center;
+  margin: 30px auto 0;
+
+  img {
+    @extend %img-radius;
+    width: 80%;
+  }
 }
 
+// конец 4го блока курсы
 
 // Начало блока 2 О нас и Наша команда
 
