@@ -346,10 +346,7 @@ body {
 .p {
     font-size: small;
 }
-=======
 
-  font-size: small;
-}
 
 // начало 4-го блока Курсы
 
@@ -382,10 +379,16 @@ body {
     max-width: 200px;
     max-height: 200px;
     object-fit: cover;
-    padding-left: 10px;
+      border-style: solid;
+  border-color: #f66d52;
+   filter: grayscale(40%);
+   border-radius: 3%;
 
-    
-    
+}
+
+.card-img-top:hover {
+      filter: grayscale(0%) contrast(1.1);
+
 }
 .card-title {
     font-family: $font-family;
