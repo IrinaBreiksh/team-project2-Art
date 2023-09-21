@@ -80,6 +80,14 @@ body a:hover {
   color: #ebd9af;
 }
 
+/* Счетчик даты и времени */
+#time {
+  font-family: "Roboto", sans-serif;
+  font-weight: 200;
+  font-size: medium;
+  background-color: #ebd9af;
+}
+
 /* Начало первого блока */
 .gallery {
   margin: 0 auto;
@@ -190,6 +198,7 @@ h1.gallery__title:hover:after {
   bottom: 20px;
   left: 20px;
   font-weight: 600;
+  font-size: 1em;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   z-index: 1;

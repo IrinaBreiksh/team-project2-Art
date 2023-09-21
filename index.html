@@ -6,8 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Art</title>
     <link rel="icon" href="./assets/images/Favicon.ico" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+</script>
     <link rel="stylesheet" href="./assets/styles/css/normalize.css" />
     <link rel="stylesheet" href="./assets/styles/css/index.css" />
+    <script type="text/javascript">
+function clock() {
+var d = new Date();
+var day = d.getDate();
+var hrs = d.getHours();
+var min = d.getMinutes();
+var sec = d.getSeconds();
+
+var mnt = new Array("января", "февраля", "марта", "апреля", "мая",
+"июня", "июля", "августа", "сентября", "октября", "ноября", "декабря");
+
+if (day <= 9) day="0" + day;
+if (hrs <= 9) hrs="0" + hrs;
+if (min <=9 ) min="0" + min;
+if (sec <= 9) sec="0" + sec;
+
+$("#time").html("Сейчас: " + hrs + ":" + min + ":" + sec + "&nbsp;&nbsp;&nbsp;" +
+day + "-го " + mnt[d.getMonth()] + " " + d.getFullYear() + " г.");
+}
+setInterval("clock()",1000);
+</script>
   </head>
   <body>
     <header class="header">
@@ -89,9 +112,13 @@
           </svg>
         </a>     
     </div>
-    </header>
+  
     <main>
-      
+    </header> 
+  <section class="date">
+      <span id="time">Дата и время</span></div>
+      </section>
+ 
 <!-- начало Блока 1-->
     <section class="gallery">
       <h1 class="gallery__title">Наши мероприятия</h1>
