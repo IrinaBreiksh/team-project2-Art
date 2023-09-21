@@ -329,3 +329,52 @@ body {
 .p {
   font-size: small;
 }
+
+.about {
+  margin: 5%;
+  max-width: 100%;
+}
+
+.team {
+  margin: 5%;
+}
+
+.foto {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  justify-content: space-between;
+  justify-items: stretch;
+  gap: 20px 10px;
+  align-items: center;
+}
+
+.card-img-top {
+  max-width: 200px;
+  max-height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding-left: 10px;
+}
+
+.card-title {
+  font-family: "Roboto", sans-serif;
+  font-size: 21px;
+  text-align: center;
+}
+
+.card-text {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.65em;
+  text-align: center;
+}
+
+.title_about {
+  font-family: "Roboto", sans-serif;
+  font-size: 27px;
+}
+
+.text_about {
+  font-family: "Roboto", sans-serif;
+  font-size: 21px;
+  text-align: justify;
+}/*# sourceMappingURL=index.css.map */
