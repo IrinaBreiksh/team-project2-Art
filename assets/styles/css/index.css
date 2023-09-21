@@ -14,16 +14,13 @@ body {
   padding-left: 16px;
   padding-right: 16px;
 }
-body:hover {
-  color: #f1ad0c;
-}
-body:hover li {
+body li {
   list-style-type: none;
 }
-body:hover a {
+body a {
   text-decoration-line: none;
 }
-body:hover a:hover {
+body a:hover {
   color: #f1ad0c;
 }
 
@@ -377,4 +374,4 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 21px;
   text-align: justify;
-}/*# sourceMappingURL=index.css.map */
+}
