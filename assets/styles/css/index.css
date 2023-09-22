@@ -1,15 +1,29 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap");
 .header ul, .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .curses__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .curses__container img {
@@ -17,7 +31,8 @@
      object-fit: cover;
   border-style: solid;
   border-color: #f66d52;
-  filter: grayscale(40%);
+  -webkit-filter: grayscale(40%);
+          filter: grayscale(40%);
   border-radius: 3%;
 }
 
@@ -41,7 +56,9 @@ body a:hover {
 
 .header {
   padding-top: 35px;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .header p {
   color: #000000;
@@ -52,7 +69,9 @@ body a:hover {
 .header .header__logo img {
   width: 80px;
   height: 80px;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .header .header__logo span {
   font-size: 27px;
@@ -91,9 +110,11 @@ body a:hover {
 
 #time {
   font-family: "Roboto", sans-serif;
-  font-weight: 200;
+  font-weight: 400;
   font-size: medium;
-  background-color: #ebd9af;
+  border-style: ridge;
+  -webkit-box-shadow: 5px 5px #888888;
+          box-shadow: 5px 5px #888888;
 }
 
 /* Начало первого блока */
@@ -103,7 +124,7 @@ body a:hover {
   place-items: center;
 }
 
-h1.gallery__title {
+h2.title {
   max-width: 1600px;
   font-size: 2em;
   color: #5a5a5a;
@@ -112,44 +133,46 @@ h1.gallery__title {
   font-family: "Roboto", sans-serif;
   font-weight: 200;
   cursor: pointer;
+  padding: 1.5em;
 }
 
-h1.gallery__title:before {
+h2.title:before {
   content: "";
   display: block;
   height: 2px;
   background: #f66d52;
   width: 150px;
   margin: 0 auto 10px;
+  -webkit-transition: 1s;
   transition: 1s;
 }
 
-h1.gallery__title:hover:before {
+h2.title:hover:before {
   width: 250px;
+  -webkit-transition: ease-out 1s;
   transition: ease-out 1s;
 }
 
-h1.gallery__title:after {
+h2.title:after {
   content: "";
   display: block;
   height: 2px;
   background: #f66d52;
   width: 150px;
   margin: 10px auto 0;
+  -webkit-transition: 1s;
   transition: 1s;
 }
 
-h1.gallery__title:hover:after {
+h2.title:hover:after {
   width: 250px;
+  -webkit-transition: ease-out 1s;
   transition: ease-out 1s;
-}
-
-.h1 {
-  max-width: 1600px;
 }
 
 .gallery__cards {
   display: grid;
+  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   padding: 2%;
@@ -157,7 +180,6 @@ h1.gallery__title:hover:after {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 20px;
-  background-color: rgba(225, 221, 221, 0.91);
 }
 
 .gallery__cards-one {
@@ -202,6 +224,7 @@ h1.gallery__title:hover:after {
   left: 20px;
   font-weight: 600;
   font-size: 1em;
+  -webkit-transition: all 0.2s;
   transition: all 0.2s;
   z-index: 1;
 }
@@ -217,13 +240,17 @@ h1.gallery__title:hover:after {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 3%;
-  filter: grayscale(50%);
+  -webkit-filter: grayscale(30%);
+          filter: grayscale(30%);
   border-style: solid;
   border-color: #f66d52;
+  -webkit-box-shadow: 6px 6px #888888;
+          box-shadow: 6px 6px #888888;
 }
 
 .gallery__img:hover {
-  filter: grayscale(0%);
+  -webkit-filter: grayscale(0%) contrast(1.2);
+          filter: grayscale(0%) contrast(1.2);
 }
 
 .about {
@@ -239,10 +266,14 @@ h1.gallery__title:hover:after {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   grid-template-rows: repeat(2, 300px);
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   justify-items: stretch;
   gap: 30px;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .card {
@@ -256,12 +287,16 @@ h1.gallery__title:hover:after {
      object-fit: cover;
   border-style: solid;
   border-color: #f66d52;
-  filter: grayscale(40%);
+  -webkit-filter: grayscale(40%);
+          filter: grayscale(40%);
   border-radius: 3%;
+  -webkit-box-shadow: 6px 6px #888888;
+          box-shadow: 6px 6px #888888;
 }
 
 .card-img-top:hover {
-  filter: grayscale(0%) contrast(1.1);
+  -webkit-filter: grayscale(0%) contrast(1.1);
+          filter: grayscale(0%) contrast(1.1);
 }
 
 .card-body {
@@ -299,16 +334,21 @@ h1.gallery__title:hover:after {
 .curses__container {
   max-width: 50vw;
   min-height: 40vw;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 30px auto 0;
 }
 .curses__container img {
   width: 80%;
+  -webkit-box-shadow: 6px 6px #888888;
+          box-shadow: 6px 6px #888888;
 }
 
 /* начало формы отзыва */
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .form__decor {
@@ -324,7 +364,9 @@ h1.gallery__title:hover:after {
   border-radius: 5%;
   padding: 45px;
   display: flexbox;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .form__form-inner input,
@@ -374,40 +416,66 @@ h1.gallery__title:hover:after {
   padding: 6px;
   border-radius: 4px;
   outline: none;
+  -webkit-transition: 0.34s;
   transition: 0.34s;
   cursor: pointer;
-  transform: scale(0.7);
+  -webkit-transform: scale(0.7);
+      -ms-transform: scale(0.7);
+          transform: scale(0.7);
 }
 
 .check .fas {
   font-size: 28px;
   color: #ccc;
-  transform: scale(0.8);
+  -webkit-transform: scale(0.8);
+      -ms-transform: scale(0.8);
+          transform: scale(0.8);
+  -webkit-transition: 0.24s 0.34s cubic-bezier(0, 0.99, 0.54, 0.33);
   transition: 0.24s 0.34s cubic-bezier(0, 0.99, 0.54, 0.33);
   opacity: 0;
 }
 
 .checked {
   border: 2px solid black;
-  animation: blind 0.34s linear;
-  transform: scale(0.9);
+  -webkit-animation: blind 0.34s linear;
+          animation: blind 0.34s linear;
+  -webkit-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+          transform: scale(0.9);
   color: #d87d56;
+}
+
+@-webkit-keyframes blind {
+  0% {
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+  }
+  100% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
 }
 
 @keyframes blind {
   0% {
-    transform: scale(0.2);
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
   }
   100% {
-    transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
   }
 }
 .fas.active {
   color: #f1ad0c;
-  transform: scale(0.8);
+  -webkit-transform: scale(0.8);
+      -ms-transform: scale(0.8);
+          transform: scale(0.8);
 }
 
 .form__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding: 20px 20px;
   color: black;
