@@ -1,404 +1,330 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Art</title>
-    <link rel="icon" href="./assets/images/Favicon.ico" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
-</script>
-    <link rel="stylesheet" href="./assets/styles/css/normalize.css" />
-    <link rel="stylesheet" href="./assets/styles/css/index.css" />
-    <script type="text/javascript">
-function clock() {
-var d = new Date();
-var day = d.getDate();
-var hrs = d.getHours();
-var min = d.getMinutes();
-var sec = d.getSeconds();
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Art</title>
+  <link rel="icon" href="./assets/images/Favicon.ico" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+  </script>
+  <link rel="stylesheet" href="./assets/styles/css/normalize.css" />
+  <link rel="stylesheet" href="./assets/styles/css/index.css" />
+  <script type="text/javascript">
+    function clock() {
+      var d = new Date();
+      var day = d.getDate();
+      var hrs = d.getHours();
+      var min = d.getMinutes();
+      var sec = d.getSeconds();
 
-var mnt = new Array("января", "февраля", "марта", "апреля", "мая",
-"июня", "июля", "августа", "сентября", "октября", "ноября", "декабря");
+      var mnt = new Array("января", "февраля", "марта", "апреля", "мая",
+        "июня", "июля", "августа", "сентября", "октября", "ноября", "декабря");
 
-if (day <= 9) day="0" + day;
-if (hrs <= 9) hrs="0" + hrs;
-if (min <=9 ) min="0" + min;
-if (sec <= 9) sec="0" + sec;
+      if (day <= 9) day = "0" + day;
+      if (hrs <= 9) hrs = "0" + hrs;
+      if (min <= 9) min = "0" + min;
+      if (sec <= 9) sec = "0" + sec;
 
-$("#time").html("Сейчас: " + hrs + ":" + min + ":" + sec + "&nbsp;&nbsp;&nbsp;" +
-day + "-го " + mnt[d.getMonth()] + " " + d.getFullYear() + " г.");
-}
-setInterval("clock()",1000);
-</script>
-  </head>
-  <body>
-    <header class="header">
-      <a href=""
-        ><div class="header__logo">
-          <img
-            class="logo-img"
-            src="./assets/images/Main-logo-art.png"
-            alt="logo-art"
-          />
-          <p class="logo-text">
-            <span>Центр творчества «ИСКУССТВО»</span><br />
-            <br />
-            Автономная некоммерческая организация
-          </p>
-        </div>
-      </a>
-      <nav>
-        <ul>
-          <li>
-            <div class="header__nav-dropdown">
-              <a class="header__nav-name" href="#">О нас</a>
-              <div class="header__nav-link-content">
-                <a href="">Чем мы занимаемся</a>
-                <a href="">Наша команда</a>
-              </div>
+      $("#time").html("Сейчас: " + hrs + ":" + min + ":" + sec + "&nbsp;&nbsp;&nbsp;" +
+        day + "-го " + mnt[d.getMonth()] + " " + d.getFullYear() + " г.");
+    }
+    setInterval("clock()", 1000);
+  </script>
+</head>
+
+<body>
+  <header class="header">
+    <a href="">
+      <div class="header__logo">
+        <img class="logo-img" src="./assets/images/Main-logo-art.png" alt="logo-art" />
+        <p class="logo-text">
+          <span>Центр творчества «ИСКУССТВО»</span><br />
+          <br />
+          Автономная некоммерческая организация
+        </p>
+      </div>
+    </a>
+    <nav>
+      <ul>
+        <li>
+          <div class="header__nav-dropdown">
+            <a class="header__nav-name" href="#">О нас</a>
+            <div class="header__nav-link-content">
+              <a href="">Чем мы занимаемся</a>
+              <a href="">Наша команда</a>
             </div>
-          </li>
-          <li><a class="" href="#">Наши мероприятия</a></li>
-          <li><a class="" href="#">Анонсы событий</a></li>
-          <li><a class="" href="#">Контакты</a></li>
-        </ul>
-      </nav>
-      <div>
-        <a href="https://vk.com/public214404468">
-          <svg
-            width="66"
-            height="66"
-            viewBox="0 0 66 66"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M45.1197 27.0792C45.2979 26.4852 45.1197 26.0693 44.288 26.0693H41.5157C40.8028 26.0693 40.486 26.4456 40.3078 26.8614C40.3078 26.8614 38.9018 30.307 36.9018 32.5248C36.2484 33.1782 35.9711 33.3763 35.6147 33.3763C35.4365 33.3763 35.1791 33.1782 35.1791 32.5842V27.0792C35.1791 26.3664 34.981 26.0693 34.387 26.0693H30.0306C29.5949 26.0693 29.3177 26.406 29.3177 26.703C29.3177 27.3763 30.3078 27.5347 30.4266 29.3961V33.4753C30.4266 34.3664 30.2682 34.5248 29.9117 34.5248C28.981 34.5248 26.684 31.0792 25.3375 27.1188C25.0603 26.3862 24.8028 26.0693 24.09 26.0693H21.3177C20.5256 26.0693 20.3672 26.4456 20.3672 26.8614C20.3672 27.5941 21.2979 31.2377 24.7434 36.0495C27.0405 39.3367 30.2682 41.1188 33.1989 41.1188C34.9612 41.1188 35.1791 40.7228 35.1791 40.0495V37.5545C35.1791 36.7624 35.3375 36.604 35.9117 36.604C36.3276 36.604 37.0207 36.802 38.6642 38.3862C40.5454 40.2674 40.8622 41.1188 41.9117 41.1188H44.684C45.4761 41.1188 45.8721 40.7228 45.6345 39.9505C45.3771 39.1782 44.486 38.0495 43.2979 36.703C42.6444 35.9307 41.6741 35.1188 41.3969 34.703C40.981 34.1683 41.0999 33.9307 41.3969 33.4753C41.3969 33.4555 44.783 28.703 45.1197 27.0792Z"
-              fill="#31a9dd"
-            />
-            <rect
-              x="13"
-              y="13"
-              width="40"
-              height="40"
-              rx="20"
-              stroke="#31a9dd"
-              stroke-width="2"
-            />
-          </svg>
-        </a>
-        <a href="">
-          <svg
-            width="66"
-            height="66"
-            viewBox="0 0 66 66"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M23.2875 31.839C23.2875 31.839 32.5753 27.8877 35.7964 26.4963C37.0313 25.9398 41.2188 24.1589 41.2188 24.1589C41.2188 24.1589 43.1516 23.3798 42.9905 25.272C42.9367 26.0511 42.5073 28.7781 42.0778 31.7277C41.4335 35.9018 40.7356 40.4653 40.7356 40.4653C40.7356 40.4653 40.6282 41.7453 39.7156 41.9679C38.8029 42.1905 37.2996 41.1888 37.0313 40.9662C36.8165 40.7993 33.0047 38.2948 31.6089 37.0704C31.2331 36.7365 30.8036 36.0687 31.6625 35.2896C33.5953 33.453 35.9038 31.1712 37.2996 29.7243C37.9439 29.0564 38.5881 27.4981 35.9038 29.3903C32.0921 32.1173 28.334 34.6774 28.334 34.6774C28.334 34.6774 27.475 35.2339 25.8644 34.733C24.2538 34.2322 22.3747 33.5643 22.3747 33.5643C22.3747 33.5643 21.0863 32.7295 23.2875 31.839Z"
-              fill="#31a9dd"
-            />
-            <rect
-              x="13"
-              y="13"
-              width="40"
-              height="40"
-              rx="20"
-              stroke="#31a9dd"
-              stroke-width="2"
-            />
-          </svg>
-        </a>     
+          </div>
+        </li>
+        <li><a class="" href="#">Наши мероприятия</a></li>
+        <li><a class="" href="#">Анонсы событий</a></li>
+        <li><a class="" href="#">Контакты</a></li>
+      </ul>
+    </nav>
+    <div>
+      <a href="https://vk.com/public214404468">
+        <svg width="66" height="66" viewBox="0 0 66 66" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M45.1197 27.0792C45.2979 26.4852 45.1197 26.0693 44.288 26.0693H41.5157C40.8028 26.0693 40.486 26.4456 40.3078 26.8614C40.3078 26.8614 38.9018 30.307 36.9018 32.5248C36.2484 33.1782 35.9711 33.3763 35.6147 33.3763C35.4365 33.3763 35.1791 33.1782 35.1791 32.5842V27.0792C35.1791 26.3664 34.981 26.0693 34.387 26.0693H30.0306C29.5949 26.0693 29.3177 26.406 29.3177 26.703C29.3177 27.3763 30.3078 27.5347 30.4266 29.3961V33.4753C30.4266 34.3664 30.2682 34.5248 29.9117 34.5248C28.981 34.5248 26.684 31.0792 25.3375 27.1188C25.0603 26.3862 24.8028 26.0693 24.09 26.0693H21.3177C20.5256 26.0693 20.3672 26.4456 20.3672 26.8614C20.3672 27.5941 21.2979 31.2377 24.7434 36.0495C27.0405 39.3367 30.2682 41.1188 33.1989 41.1188C34.9612 41.1188 35.1791 40.7228 35.1791 40.0495V37.5545C35.1791 36.7624 35.3375 36.604 35.9117 36.604C36.3276 36.604 37.0207 36.802 38.6642 38.3862C40.5454 40.2674 40.8622 41.1188 41.9117 41.1188H44.684C45.4761 41.1188 45.8721 40.7228 45.6345 39.9505C45.3771 39.1782 44.486 38.0495 43.2979 36.703C42.6444 35.9307 41.6741 35.1188 41.3969 34.703C40.981 34.1683 41.0999 33.9307 41.3969 33.4753C41.3969 33.4555 44.783 28.703 45.1197 27.0792Z"
+            fill="#31a9dd" />
+          <rect x="13" y="13" width="40" height="40" rx="20" stroke="#31a9dd" stroke-width="2" />
+        </svg>
+      </a>
+      <a href="">
+        <svg width="66" height="66" viewBox="0 0 66 66" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M23.2875 31.839C23.2875 31.839 32.5753 27.8877 35.7964 26.4963C37.0313 25.9398 41.2188 24.1589 41.2188 24.1589C41.2188 24.1589 43.1516 23.3798 42.9905 25.272C42.9367 26.0511 42.5073 28.7781 42.0778 31.7277C41.4335 35.9018 40.7356 40.4653 40.7356 40.4653C40.7356 40.4653 40.6282 41.7453 39.7156 41.9679C38.8029 42.1905 37.2996 41.1888 37.0313 40.9662C36.8165 40.7993 33.0047 38.2948 31.6089 37.0704C31.2331 36.7365 30.8036 36.0687 31.6625 35.2896C33.5953 33.453 35.9038 31.1712 37.2996 29.7243C37.9439 29.0564 38.5881 27.4981 35.9038 29.3903C32.0921 32.1173 28.334 34.6774 28.334 34.6774C28.334 34.6774 27.475 35.2339 25.8644 34.733C24.2538 34.2322 22.3747 33.5643 22.3747 33.5643C22.3747 33.5643 21.0863 32.7295 23.2875 31.839Z"
+            fill="#31a9dd" />
+          <rect x="13" y="13" width="40" height="40" rx="20" stroke="#31a9dd" stroke-width="2" />
+        </svg>
+      </a>
     </div>
-  
+
     <main>
-    </header> 
+  </header>
   <section class="date">
-      <span id="time">Дата и время</span></div>
-      </section>
- 
-<!-- начало Блока 1-->
-    <section class="gallery">
-      <h1 class="gallery__title">Наши мероприятия</h1>
-      <div class="gallery__cards">
-        <div class="gallery__cards-one">
-          <img class="gallery__img" src="/assets/images/Brodsky2.jpg" alt="Brodsky">
-          <h2 class="gallery__cards-title"><a
-              href="https://vk.com/public214404468?w=wall-214404468_77">"ЯМыБродский"</a>
-          </h2>
-        </div>
-        <div class="gallery__cards-two">
-          <img class="gallery__img" src="/assets/images/Anons-postanovki.jpg" alt="5meters-under">
-          <h2 class="gallery__cards-title"><a
-              href="https://vk.com/public214404468?z=photo-214404468_457239279%2Falbum-214404468_00%2Frev">"Пять метров
-              под землей"</a>
-            </span>
-        </div>
-        <div class="gallery__cards-three">
-          <img class="gallery__img" src="/assets/images/Hakaton.jpg" alt="Hakaton">
-          <h2 class="gallery__cards-title"><a href="https://vk.com/public214404468?w=wall-214404468_72">Хакатон</a>
-          </h2>
-        </div>
-        <div class="gallery__cards-four">
-          <img class="gallery__img" src="/assets/images/Seminar-trening september (2).jpg" alt="Seminar">
-          <h2 class="gallery__cards-title"><a href="https://vk.com/public214404468?w=wall-214404468_82">Семинар
-              -тренинг</a>
-          </h2>
-        </div>
-        <div class="gallery__cards-five">
-          <img class="gallery__img" src="/assets/images/Smmevent.jpg" alt="SMM">
-          <h2 class="gallery__cards-title"><a href="https://vk.com/public214404468?w=wall-214404468_74">Урок SMM</a>
-          </h2>
-        </div>
-      </div>
-    </section>
-    <!--Конец блока  1-->
-<!-- Начало блока 2 О нас и Наша команда -->
-<section>
-  <div class="about">
-    <h2 class="title_about">О нас</h2>
+    <span id="time">Дата и время</span></div>
+  </section>
 
-    <p class="text_about">
-      Автономная некоммерческая организация Центр творчества "Искусство"
-      г. Артём существует с 2018г. Учредитель и директор организации
-      Боровик Елена Александровна.
-    </p>
-    <p class="text_about">
-      Мы знаем, что искусство обладает великой созидающей силой. Поэтому
-      регулярно проводим социально-культурные мероприятия в г. Артем для
-      детей и взрослых. Кроме того, в центре творчества работает
-      театральная студия "Балаган". Актеры театра-студии проводят
-      благотворительные выступления для детей, находящихся в
-      реабилитационном центре для несовершеннолетних.
-    </p>
-    <p class="text_about">
-      Для всех, кто желает сделать мир немного добрее, в центре творчества
-      работает школа волонтеров культуры.
-    </p>
-  </div>
-  <div class="team">
-    <h2 class="title_about">Наша команда</h2>
-    <div class="foto">
-      <div class="card">
-        <img
-          src="assets/images/borovik.jpg"
-          class="card-img-top"
-          alt="Borovik Elena"
-        />
-        <div class="card-body">
-          <p class="card-title">Боровик Елена</p>
-          <p class="card-text">
-            Учредитель, директор, АНО ЦТ "Искусство, художественный
-            руководитель театра-студии "Балаган"
-          </p>
-        </div>
+  <!-- начало Блока 1-->
+  <section class="gallery">
+    <h1 class="gallery__title">Наши мероприятия</h1>
+    <div class="gallery__cards">
+      <div class="gallery__cards-one">
+        <img class="gallery__img" src="/assets/images/Brodsky2.jpg" alt="Brodsky">
+        <h2 class="gallery__cards-title"><a href="https://vk.com/public214404468?w=wall-214404468_77">"ЯМыБродский"</a>
+        </h2>
       </div>
-      <div class="card">
-        <img
-          src="assets/images/bibaeva.jpg"
-          class="card-img-top"
-          alt="Bibaeva Elena"
-        />
-        <div class="card-body">
-          <p class="card-title">Бибаева Елена</p>
-          <p class="card-text">
-            Актриса театра-студии "Балаган", член общественной организации
-            АНО ЦТ "Искусство"
-          </p>
-        </div>
+      <div class="gallery__cards-two">
+        <img class="gallery__img" src="/assets/images/Anons-postanovki.jpg" alt="5meters-under">
+        <h2 class="gallery__cards-title"><a
+            href="https://vk.com/public214404468?z=photo-214404468_457239279%2Falbum-214404468_00%2Frev">"Пять метров
+            под землей"</a>
+          </span>
       </div>
-      <div class="card">
-        <img
-          src="assets/images/kazakov.jpg"
-          class="card-img-top"
-          alt="Kazakov Anatoliy"
-        />
-        <div class="card-body">
-          <p class="card-title">Казаков Анатолий</p>
-          <p class="card-text">
-            Актёр театра-студии "Балаган", член общественной организации
-            АНО ЦТ "Искусство"
-          </p>
-        </div>
+      <div class="gallery__cards-three">
+        <img class="gallery__img" src="/assets/images/Hakaton.jpg" alt="Hakaton">
+        <h2 class="gallery__cards-title"><a href="https://vk.com/public214404468?w=wall-214404468_72">Хакатон</a>
+        </h2>
       </div>
-      <div class="card">
-        <img
-          src="assets/images/kovaleva.jpg"
-          class="card-img-top"
-          alt="Kovaleva Lubov"
-        />
-        <div class="card-body">
-          <p class="card-title">Ковалева Любовь</p>
-          <p class="card-text">
-            Актриса театра-студии "Балаган", член общественной организации
-            АНО ЦТ "Искусство"
-          </p>
-        </div>
+      <div class="gallery__cards-four">
+        <img class="gallery__img" src="/assets/images/Seminar-trening september (2).jpg" alt="Seminar">
+        <h2 class="gallery__cards-title"><a href="https://vk.com/public214404468?w=wall-214404468_82">Семинар
+            -тренинг</a>
+        </h2>
       </div>
-      <div class="card">
-        <img
-          src="assets/images/lapshina.jpg"
-          class="card-img-top"
-          alt="Lapshina Olga"
-        />
-        <div class="card-body">
-          <p class="card-title">Лапшина Ольга</p>
-          <p class="card-text">
-            Актриса театра-студии "Балаган", член общественной организации
-            АНО ЦТ "Искусство"
-          </p>
-        </div>
-      </div>
-      <div class="card">
-        <img
-          src="assets/images/mihaylova.jpg"
-          class="card-img-top"
-          alt="Mihaylova Ekaterina"
-        />
-        <div class="card-body">
-          <p class="card-title">Михайлова Екатерина</p>
-          <p class="card-text">
-            Актриса театра-студии "Балаган", член общественной организации
-            АНО ЦТ "Искусство"
-          </p>
-        </div>
-      </div>
-      <div class="card">
-        <img
-          src="assets/images/moscvin.jpg"
-          class="card-img-top"
-          alt="Moscvin Aleksei"
-        />
-        <div class="card-body">
-          <p class="card-title">Москвин Алексей</p>
-          <p class="card-text">
-            Актёр театра-студии "Балаган", член общественной организации
-            АНО ЦТ "Искусство"
-          </p>
-        </div>
-      </div>
-      <div class="card">
-        <img
-          src="assets/images/moscvina.jpg"
-          class="card-img-top"
-          alt="Moscvina Elena"
-        />
-        <div class="card-body">
-          <p class="card-title">Москвина Елена</p>
-          <p class="card-text">
-            Актриса театра-студии "Балаган", член общественной организации
-            АНО ЦТ "Искусство"
-          </p>
-        </div>
-      </div>
-      <div class="card">
-        <img
-          src="assets/images/shtocvich.jpg"
-          class="card-img-top"
-          alt="Ыhtocvich Marina"
-        />
-        <div class="card-body">
-          <p class="card-title">Штоквич Марина</p>
-          <p class="card-text">
-            Актриса театра-студии "Балаган", член общественной организации
-            АНО ЦТ "Искусство"
-          </p>
-        </div>
-      </div>
-      <div class="card">
-        <img
-          src="assets/images/trebuhov.jpg"
-          class="card-img-top"
-          alt="Trebuhov Garry"
-        />
-        <div class="card-body">
-          <p class="card-title">Требухов Гарри</p>
-          <p class="card-text">
-            Актёр театра-студии "Балаган", член общественной организации
-            АНО ЦТ "Искусство"
-          </p>
-        </div>
+      <div class="gallery__cards-five">
+        <img class="gallery__img" src="/assets/images/Smmevent.jpg" alt="SMM">
+        <h2 class="gallery__cards-title"><a href="https://vk.com/public214404468?w=wall-214404468_74">Урок SMM</a>
+        </h2>
       </div>
     </div>
-  </div>
-</section>
-<!-- Конец блока 2 О нас и Наша команда -->
+  </section>
+  <!--Конец блока  1-->
+  <!-- Начало блока 2 О нас и Наша команда -->
+  <section>
+    <div class="about">
+      <h2 class="title_about">О нас</h2>
 
-<!-- начало 4го блока Курсы -->
-      <section class="curses__container">
-  <div class="curse__1">
-  <img src="" alt="">
-  <h3>Театральная студия</h3> <!-- можно будет переделать в ссылку -->
-  <p>Открыт набор желающих во взрослую группу для новичков. В программе: основы актерского мастерства, словесное
-    действие, репетиции и участие в театрализованных постановках, участие в социально-значимых проектах.</p>
-  <div class="curse__1">
-  <img src="" alt="">
-  <h3>Творческие занятия сдетьми</h3>
-  <p>Организовываем творческие занятие с деть после показа. Занятия направлены на закрепление и осмысления
-    просмотренного материала, как нравственного, так и эстетического.</p>
-</div>
-
-      <div class="curse__1">
-        <img src="" alt="">
-        <h3>"Артём. Культура. Волонтёр".</h3>
-        <p>Завершилось последнее занятие курса "Артём. Культура. Волонтёр".Мы искренне надеемся, что с новыми
-          обретёнными знаниями выпускники курса, смогут качественно и профессионально принимать участия в различных
-          мероприятия культурной деятельности.</p>
-
-      </div>
-    </section>
-    <!-- конец 4-го блока Курсы -->
-
-
-<!--начало формы Отзыва-->
-        <section class="form">
-        <form class="form__decor">
-<div class="form__form-inner">
-<h3>Оставьте отзыв</h3>
-<input type="text" placeholder="Ваше Имя">
-<input type="email" placeholder="Ваш E-mail">
-<textarea placeholder="Сообщение..." rows="3"></textarea>
-
-<div class="form__items">
-  <div class="item">
-    <form action="">
-      <label for="checkbox">
-      <div id="check" class="check" >
-        <i id="fas" class="fas fa-check"></i>
-      </div>
-        <input type="checkbox" id="checkbox">
-      <label>
-    </form>
-    </div>
-    <div class="item">
-      <p>
-        Регистрируясь в системе, я принимаю<br>
-        <a href="#">Условия соглашения</a>,<a href="#">Политики конфиденциальности</a><br>
-        и даю согласие на <a href="#">обработку персональных данных.</a>
+      <p class="text_about">
+        Автономная некоммерческая организация Центр творчества "Искусство"
+        г. Артём существует с 2018г. Учредитель и директор организации
+        Боровик Елена Александровна.
       </p>
-  </div>
-</div>
+      <p class="text_about">
+        Мы знаем, что искусство обладает великой созидающей силой, поэтому
+        регулярно проводим социально-культурные мероприятия в г. Артем. Кроме того, в центре творчества работает
+        театральная студия "Балаган". Актеры театра-студии проводят
+        благотворительные выступления для детей и взрослых.
+      </p>
+    </div>
+    <div class="team">
+      <h2 class="title_about">Наша команда</h2>
+      <div class="foto">
+        <div class="card">
+          <img src="assets/images/borovik.jpg" class="card-img-top" alt="Borovik Elena" />
+          <div class="card-body">
+            <p class="card-title">Боровик Елена</p>
+            <p class="card-text">
+              Учредитель, директор, АНО ЦТ "Искусство, художественный
+              руководитель театра-студии "Балаган"
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="assets/images/bibaeva.jpg" class="card-img-top" alt="Bibaeva Elena" />
+          <div class="card-body">
+            <p class="card-title">Бибаева Елена</p>
+            <p class="card-text">
+              Актриса театра-студии "Балаган", член общественной организации
+              АНО ЦТ "Искусство"
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="assets/images/kazakov.jpg" class="card-img-top" alt="Kazakov Anatoliy" />
+          <div class="card-body">
+            <p class="card-title">Казаков Анатолий</p>
+            <p class="card-text">
+              Актёр театра-студии "Балаган", член общественной организации
+              АНО ЦТ "Искусство"
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="assets/images/kovaleva.jpg" class="card-img-top" alt="Kovaleva Lubov" />
+          <div class="card-body">
+            <p class="card-title">Ковалева Любовь</p>
+            <p class="card-text">
+              Актриса театра-студии "Балаган", член общественной организации
+              АНО ЦТ "Искусство"
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="assets/images/lapshina.jpg" class="card-img-top" alt="Lapshina Olga" />
+          <div class="card-body">
+            <p class="card-title">Лапшина Ольга</p>
+            <p class="card-text">
+              Актриса театра-студии "Балаган", член общественной организации
+              АНО ЦТ "Искусство"
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="assets/images/makarova.jpg" class="card-img-top" alt="Makarova Olga" />
+          <div class="card-body">
+            <p class="card-title">Макарова Ольга</p>
+            <p class="card-text">
+              Актриса театра-студии "Балаган", член общественной организации
+              АНО ЦТ "Искусство"
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="assets/images/mihaylova.jpg" class="card-img-top" alt="Mihaylova Ekaterina" />
+          <div class="card-body">
+            <p class="card-title">Михайлова Екатерина</p>
+            <p class="card-text">
+              Актриса театра-студии "Балаган", член общественной организации
+              АНО ЦТ "Искусство"
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="assets/images/moscvin.jpg" class="card-img-top" alt="Moscvin Aleksei" />
+          <div class="card-body">
+            <p class="card-title">Москвин Алексей</p>
+            <p class="card-text">
+              Актёр театра-студии "Балаган", член общественной организации
+              АНО ЦТ "Искусство"
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="assets/images/moscvina.jpg" class="card-img-top" alt="Moscvina Elena" />
+          <div class="card-body">
+            <p class="card-title">Москвина Елена</p>
+            <p class="card-text">
+              Актриса театра-студии "Балаган", член общественной организации
+              АНО ЦТ "Искусство"
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="assets/images/paznikova.jpg" class="card-img-top" alt="Paznikova Tatiana" />
+          <div class="card-body">
+            <p class="card-title">Пазникова Татьяна</p>
+            <p class="card-text">
+              Актриса театра-студии "Балаган", член общественной организации
+              АНО ЦТ "Искусство"
+            </p>
+          </div>
+        </div>
+        
+        <div class="card">
+          <img src="assets/images/trebuhov.jpg" class="card-img-top" alt="Trebuhov Garry" />
+          <div class="card-body">
+            <p class="card-title">Требухов Гарри</p>
+            <p class="card-text">
+              Актёр театра-студии "Балаган", член общественной организации
+              АНО ЦТ "Искусство"
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="assets/images/shtocvich.jpg" class="card-img-top" alt="Ыhtocvich Marina" />
+          <div class="card-body">
+            <p class="card-title">Штоквич Марина</p>
+            <p class="card-text">
+              Актриса театра-студии "Балаган", член общественной организации
+              АНО ЦТ "Искусство"
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Конец блока 2 О нас и Наша команда -->
 
-<script>
-var check = document.getElementById("check");
-var fas = document.getElementById("fas");
-  
-  check.onclick = function (){
-    this.classList.toggle("checked");
-    fas.classList.toggle("active");
-  }
-</script>
+  <!-- начало 4го блока Курсы -->
+  <section class="curses__container">
+    <img src="./assets/images/comanda.jpg" alt="Театральная команда">
+    <h3>Театральная студия</h3> <!-- можно будет переделать в ссылку -->
+    <p>Открыт набор желающих во взрослую группу для новичков. В программе: основы актерского мастерства, словесное
+      действие, репетиции и участие в театрализованных постановках, участие в социально-значимых проектах.</p>
+  </section>
+  <!-- конец 4-го блока Курсы -->
 
-<input type="submit" value="Отправить">
-</div>
-</form>
-        </section>
-        <!--конец формы Отзыва--->
-    </main>
-    <footer>
-            
-    </footer>
-  </body>
+
+  <!--начало формы Отзыва-->
+  <section class="form">
+    <form class="form__decor">
+      <div class="form__form-inner">
+        <h3>Оставьте отзыв</h3>
+        <input type="text" placeholder="Ваше Имя">
+        <input type="email" placeholder="Ваш E-mail">
+        <textarea placeholder="Сообщение..." rows="3"></textarea>
+
+        <div class="form__items">
+          <div class="item">
+            <form action="">
+              <label for="checkbox">
+                <div id="check" class="check">
+                  <i id="fas" class="fas fa-check"></i>
+                </div>
+                <input type="checkbox" id="checkbox">
+                <label>
+            </form>
+          </div>
+          <div class="item">
+            <p>
+              Регистрируясь в системе, я принимаю<br>
+              <a href="#">Условия соглашения</a>,<a href="#">Политики конфиденциальности</a><br>
+              и даю согласие на <a href="#">обработку персональных данных.</a>
+            </p>
+          </div>
+        </div>
+
+        <script>
+          var check = document.getElementById("check");
+          var fas = document.getElementById("fas");
+
+          check.onclick = function () {
+            this.classList.toggle("checked");
+            fas.classList.toggle("active");
+          }
+        </script>
+
+        <input type="submit" value="Отправить">
+      </div>
+    </form>
+  </section>
+  <!--конец формы Отзыва--->
+  </main>
+  <footer>
+
+  </footer>
+</body>
+
 </html>

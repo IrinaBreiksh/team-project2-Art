@@ -11,3 +11,9 @@ $font-size-title: 27px;
     flex-direction: row;
     justify-content: space-between;
 }
+
+%flex-element-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
