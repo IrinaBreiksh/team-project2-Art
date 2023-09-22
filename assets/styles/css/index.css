@@ -9,7 +9,15 @@
 .curses__container {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
+}
+
+.curses__container img {
+  object-fit: cover;
+  border-style: solid;
+  border-color: #f66d52;
+  filter: grayscale(40%);
+  border-radius: 3%;
 }
 
 body {
@@ -340,6 +348,16 @@ body {
 
 .p {
   font-size: small;
+}
+
+.curses__container {
+  max-width: 50vw;
+  min-height: 40vw;
+  align-items: center;
+  margin: 30px auto 0;
+}
+.curses__container img {
+  width: 80%;
 }
 
 .about {
