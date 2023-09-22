@@ -137,6 +137,7 @@ h1.gallery__title:hover:after {
 
 .gallery__cards {
   display: grid;
+  height: -moz-fit-content;
   height: fit-content;
   padding: 2%;
   max-width: 1200;
@@ -149,31 +150,36 @@ h1.gallery__title:hover:after {
 .gallery__cards-one {
   position: relative;
   grid-area: 1/1/3/3;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .gallery__cards-two {
   position: relative;
   grid-area: 1/3/2/4;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .gallery__cards-three {
   position: relative;
   grid-area: 1/4/2/5;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .gallery__cards-four {
   position: relative;
   grid-area: 2/3/3/4;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .gallery__cards-five {
   position: relative;
   grid-area: 2/4/3/5;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .gallery__cards-title {
@@ -195,7 +201,8 @@ h1.gallery__title:hover:after {
 .gallery__img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 3%;
   filter: grayscale(50%);
   border-style: solid;
@@ -347,16 +354,22 @@ body {
 .foto {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-rows: repeat(4, 300px);
   justify-content: space-between;
   justify-items: stretch;
-  gap: 20px 10px;
+  gap: 30px;
   align-items: center;
+}
+
+.card {
+  text-align: center;
 }
 
 .card-img-top {
   max-width: 200px;
   max-height: 200px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-style: solid;
   border-color: #f66d52;
   filter: grayscale(40%);
@@ -367,27 +380,34 @@ body {
   filter: grayscale(0%) contrast(1.1);
 }
 
+.card-body {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
 .card-title {
   font-family: "Roboto", sans-serif;
   font-size: 21px;
   text-align: center;
+  margin-bottom: 10px;
 }
 
 .card-text {
   font-family: "Roboto", sans-serif;
   font-size: 0.65em;
   text-align: center;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .title_about {
   font-family: "Roboto", sans-serif;
   font-size: 27px;
+  margin-bottom: 10px;
 }
 
 .text_about {
   font-family: "Roboto", sans-serif;
   font-size: 21px;
   text-align: justify;
-}
-
-/*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=index.css.map */

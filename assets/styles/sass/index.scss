@@ -387,14 +387,17 @@ body {
 .foto {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-rows: repeat(4, 300px);
   justify-content: space-between;
   justify-items: stretch;
-  gap: 20px 10px;
+  gap: 30px;
   align-items: center;
 
 
 }
-
+.card {
+text-align: center;
+}
 .card-img-top {
   max-width: 200px;
   max-height: 200px;
@@ -410,23 +413,32 @@ body {
   filter: grayscale(0%) contrast(1.1);
 
 }
+.card-body {
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
 
 .card-title {
   font-family: $font-family;
   font-size: $font-size-text;
   text-align: center;
+  margin-bottom: 10px;
 }
 
 .card-text {
   font-family: $font-family;
   font-size: 0.65em;
   text-align: center;
+  margin-left: 10px;
+  margin-right: 10px;
 
 }
 
 .title_about {
   font-family: $font-family;
   font-size: $font-size-title;
+  margin-bottom: 10px;
 }
 
 .text_about {
