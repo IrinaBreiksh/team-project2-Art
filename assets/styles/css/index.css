@@ -1,29 +1,15 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap");
-.header ul, .header {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.footer__container, .header ul, .header {
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .curses__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .curses__container img {
@@ -31,8 +17,7 @@
      object-fit: cover;
   border-style: solid;
   border-color: #f66d52;
-  -webkit-filter: grayscale(40%);
-          filter: grayscale(40%);
+  filter: grayscale(40%);
   border-radius: 3%;
 }
 
@@ -41,8 +26,6 @@ body {
   font-size: 21px;
   max-width: 1920px;
   margin: 0 auto;
-  padding-left: 16px;
-  padding-right: 16px;
 }
 body li {
   list-style-type: none;
@@ -56,9 +39,7 @@ body a:hover {
 
 .header {
   padding-top: 35px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 .header p {
   color: #000000;
@@ -69,9 +50,7 @@ body a:hover {
 .header .header__logo img {
   width: 80px;
   height: 80px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 .header .header__logo span {
   font-size: 27px;
@@ -79,6 +58,7 @@ body a:hover {
 }
 .header li {
   padding-right: 60px;
+  padding-left: 16px;
 }
 .header li .header__nav-dropdown {
   position: relative;
@@ -106,6 +86,7 @@ body a:hover {
 /* Счетчик даты и времени */
 .date {
   text-align: end;
+  padding-right: 16px;
 }
 
 #time {
@@ -113,27 +94,18 @@ body a:hover {
   font-weight: 400;
   font-size: medium;
   border-style: ridge;
-  -webkit-box-shadow: 5px 5px #888888;
-          box-shadow: 5px 5px #888888;
+  box-shadow: 5px 5px #888888;
 }
 
-/* Начало первого блока */
-.gallery {
-  margin: 0 auto;
-  max-width: 1920px;
-  place-items: center;
-}
-
+/* Начало 1 блока */
 h2.title {
-  max-width: 1600px;
   font-size: 2em;
   color: #5a5a5a;
   text-align: center;
-  padding-left: 8%;
   font-family: "Roboto", sans-serif;
   font-weight: 200;
   cursor: pointer;
-  padding: 1.5em;
+  padding-bottom: 25px;
 }
 
 h2.title:before {
@@ -143,13 +115,11 @@ h2.title:before {
   background: #f66d52;
   width: 150px;
   margin: 0 auto 10px;
-  -webkit-transition: 1s;
   transition: 1s;
 }
 
 h2.title:hover:before {
   width: 250px;
-  -webkit-transition: ease-out 1s;
   transition: ease-out 1s;
 }
 
@@ -160,19 +130,16 @@ h2.title:after {
   background: #f66d52;
   width: 150px;
   margin: 10px auto 0;
-  -webkit-transition: 1s;
   transition: 1s;
 }
 
 h2.title:hover:after {
   width: 250px;
-  -webkit-transition: ease-out 1s;
   transition: ease-out 1s;
 }
 
 .gallery__cards {
   display: grid;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   padding: 2%;
@@ -224,7 +191,6 @@ h2.title:hover:after {
   left: 20px;
   font-weight: 600;
   font-size: 1em;
-  -webkit-transition: all 0.2s;
   transition: all 0.2s;
   z-index: 1;
 }
@@ -240,22 +206,24 @@ h2.title:hover:after {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 3%;
-  -webkit-filter: grayscale(30%);
-          filter: grayscale(30%);
+  filter: grayscale(30%);
   border-style: solid;
   border-color: #f66d52;
-  -webkit-box-shadow: 6px 6px #888888;
-          box-shadow: 6px 6px #888888;
+  box-shadow: 6px 6px #888888;
 }
 
 .gallery__img:hover {
-  -webkit-filter: grayscale(0%) contrast(1.2);
-          filter: grayscale(0%) contrast(1.2);
+  filter: grayscale(0%) contrast(1.2);
+}
+
+.about_us {
+  background-color: #E9EFF6;
 }
 
 .about {
-  margin: 5%;
-  max-width: 100%;
+  max-width: 50vw;
+  align-items: center;
+  margin: 30px auto 0;
 }
 
 .team {
@@ -266,14 +234,10 @@ h2.title:hover:after {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   grid-template-rows: repeat(2, 300px);
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   justify-items: stretch;
   gap: 30px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 .card {
@@ -287,16 +251,13 @@ h2.title:hover:after {
      object-fit: cover;
   border-style: solid;
   border-color: #f66d52;
-  -webkit-filter: grayscale(40%);
-          filter: grayscale(40%);
   border-radius: 3%;
-  -webkit-box-shadow: 6px 6px #888888;
-          box-shadow: 6px 6px #888888;
+  box-shadow: 6px 6px #888888;
 }
 
 .card-img-top:hover {
-  -webkit-filter: grayscale(0%) contrast(1.1);
-          filter: grayscale(0%) contrast(1.1);
+  max-width: 250px;
+  max-height: 250px;
 }
 
 .card-body {
@@ -334,21 +295,17 @@ h2.title:hover:after {
 .curses__container {
   max-width: 50vw;
   min-height: 40vw;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   margin: 30px auto 0;
 }
 .curses__container img {
   width: 80%;
-  -webkit-box-shadow: 6px 6px #888888;
-          box-shadow: 6px 6px #888888;
+  box-shadow: 6px 6px #888888;
 }
 
 /* начало формы отзыва */
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .form__decor {
@@ -364,9 +321,7 @@ h2.title:hover:after {
   border-radius: 5%;
   padding: 45px;
   display: flexbox;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 
 .form__form-inner input,
@@ -393,6 +348,10 @@ h2.title:hover:after {
   width: 50%;
 }
 
+.form__form-inner input[type=submit]:hover {
+  background: #f7a988;
+}
+
 .form__form-innertextarea {
   resize: none;
 }
@@ -405,77 +364,46 @@ h2.title:hover:after {
   color: #f1ad0c;
 }
 
-* {
-  padding: 0;
-  margin: 0;
-}
-
 .check {
   border: 2px solid #ccc;
   display: inline-block;
   padding: 6px;
   border-radius: 4px;
   outline: none;
-  -webkit-transition: 0.34s;
   transition: 0.34s;
   cursor: pointer;
-  -webkit-transform: scale(0.7);
-      -ms-transform: scale(0.7);
-          transform: scale(0.7);
+  transform: scale(0.7);
 }
 
 .check .fas {
   font-size: 28px;
   color: #ccc;
-  -webkit-transform: scale(0.8);
-      -ms-transform: scale(0.8);
-          transform: scale(0.8);
-  -webkit-transition: 0.24s 0.34s cubic-bezier(0, 0.99, 0.54, 0.33);
+  transform: scale(0.8);
   transition: 0.24s 0.34s cubic-bezier(0, 0.99, 0.54, 0.33);
   opacity: 0;
 }
 
 .checked {
   border: 2px solid black;
-  -webkit-animation: blind 0.34s linear;
-          animation: blind 0.34s linear;
-  -webkit-transform: scale(0.9);
-      -ms-transform: scale(0.9);
-          transform: scale(0.9);
+  animation: blind 0.34s linear;
+  transform: scale(0.9);
   color: #d87d56;
-}
-
-@-webkit-keyframes blind {
-  0% {
-    -webkit-transform: scale(0.2);
-            transform: scale(0.2);
-  }
-  100% {
-    -webkit-transform: scale(0.9);
-            transform: scale(0.9);
-  }
 }
 
 @keyframes blind {
   0% {
-    -webkit-transform: scale(0.2);
-            transform: scale(0.2);
+    transform: scale(0.2);
   }
   100% {
-    -webkit-transform: scale(0.9);
-            transform: scale(0.9);
+    transform: scale(0.9);
   }
 }
 .fas.active {
   color: #f1ad0c;
-  -webkit-transform: scale(0.8);
-      -ms-transform: scale(0.8);
-          transform: scale(0.8);
+  transform: scale(0.8);
 }
 
 .form__items {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   padding: 20px 20px;
   color: black;
@@ -499,3 +427,36 @@ h2.title:hover:after {
 .p {
   font-size: small;
 }
+
+.footer {
+  background-color: #a3a2a2;
+}
+.footer__container {
+  padding: 50px 40px 20px;
+  justify-content: space-around;
+}
+.footer__contacts {
+  text-align: center;
+}
+.footer ul {
+  padding-left: 0px;
+}
+.footer li {
+  padding: 7px;
+}
+
+.subscribe-form__button {
+  width: 245px;
+  background: #f69a73;
+  color: white;
+  font-size: 14px;
+  line-height: 40px;
+  border-radius: 20px;
+  border-color: #f69a73;
+  border-width: 0;
+  border-bottom: 4px solid #d87d56;
+  cursor: pointer;
+}
+.subscribe-form__button:hover {
+  background: #f7a988;
+}/*# sourceMappingURL=index.css.map */
