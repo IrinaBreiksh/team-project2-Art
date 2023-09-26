@@ -425,67 +425,11 @@ h2.title:hover:after {
   color: #f1ad0c;
 }
 
-.check {
-  border: 2px solid #ccc;
-  display: inline-block;
-  padding: 6px;
-  border-radius: 4px;
-  outline: none;
-  -webkit-transition: 0.34s;
-  transition: 0.34s;
-  cursor: pointer;
-  -webkit-transform: scale(0.7);
-      -ms-transform: scale(0.7);
-          transform: scale(0.7);
-}
-
-.check .fas {
-  font-size: 28px;
-  color: #ccc;
-  -webkit-transform: scale(0.8);
-      -ms-transform: scale(0.8);
-          transform: scale(0.8);
-  -webkit-transition: 0.24s 0.34s cubic-bezier(0, 0.99, 0.54, 0.33);
-  transition: 0.24s 0.34s cubic-bezier(0, 0.99, 0.54, 0.33);
-  opacity: 0;
-}
-
-.checked {
-  border: 2px solid black;
-  -webkit-animation: blind 0.34s linear;
-          animation: blind 0.34s linear;
-  -webkit-transform: scale(0.9);
-      -ms-transform: scale(0.9);
-          transform: scale(0.9);
-  color: #d87d56;
-}
-
-@-webkit-keyframes blind {
-  0% {
-    -webkit-transform: scale(0.2);
-            transform: scale(0.2);
-  }
-  100% {
-    -webkit-transform: scale(0.9);
-            transform: scale(0.9);
-  }
-}
-
-@keyframes blind {
-  0% {
-    -webkit-transform: scale(0.2);
-            transform: scale(0.2);
-  }
-  100% {
-    -webkit-transform: scale(0.9);
-            transform: scale(0.9);
-  }
-}
-.fas.active {
-  color: #f1ad0c;
-  -webkit-transform: scale(0.8);
-      -ms-transform: scale(0.8);
-          transform: scale(0.8);
+.checkbox {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  justify-self: flex-start;
 }
 
 .form__items {
@@ -505,10 +449,6 @@ h2.title:hover:after {
 
 .item:nth-of-type(1) {
   width: 90px;
-}
-
-#checkbox {
-  display: none;
 }
 
 .p {
