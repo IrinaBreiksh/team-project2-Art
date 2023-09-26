@@ -225,9 +225,14 @@ h2.title:hover:after {
 
 // Начало 2 блока  О нас и Наша команда
 
+.about_us {
+    background-color: #E9EFF6;
+}
+
 .about {
-  margin: 5%;
-  max-width: 100%;
+max-width: 50vw;
+align-items: center;
+margin: 30px auto 0;
 }
 
 .team {
@@ -254,14 +259,14 @@ text-align: center;
   object-fit: cover;
   border-style: solid;
   border-color: #f66d52;
-  filter: grayscale(40%);
   border-radius: 3%;
   box-shadow: 6px 6px #888888;
 
 }
 
 .card-img-top:hover {
-  filter: grayscale(0%) contrast(1.1);
+    max-width: 250px;
+    max-height: 250px;
 }
 
 .card-body {
