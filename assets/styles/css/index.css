@@ -124,7 +124,6 @@ h2.title {
   text-align: center;
   font-family: "Roboto", sans-serif;
   font-weight: 200;
-  cursor: pointer;
   padding-bottom: 25px;
 }
 
@@ -160,6 +159,10 @@ h2.title:hover:after {
   width: 250px;
   -webkit-transition: ease-out 1s;
   transition: ease-out 1s;
+}
+
+.title {
+  cursor: pointer;
 }
 
 .gallery__cards {
@@ -251,16 +254,28 @@ h2.title:hover:after {
   max-width: 1920px;
 }
 
-.video__anons {
-  display: grid;
-  max-width: 1200px;
-  margin: 40px auto 0;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  -webkit-column-gap: 15px;
-     -moz-column-gap: 15px;
-          column-gap: 15px;
+@media screen and (min-width: 1116px) {
+  .video__anons {
+    display: grid;
+    max-width: 1200px;
+    margin: 40px auto 0;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    -webkit-column-gap: 15px;
+       -moz-column-gap: 15px;
+            column-gap: 15px;
+  }
 }
-
+@media screen and (max-width: 1115px) {
+  .video__anons {
+    display: grid;
+    max-width: 1115px;
+    place-items: center;
+    -o-object-fit: cover;
+       object-fit: cover;
+    row-gap: 5px;
+    grid-template-rows: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
 .about_us {
   background-color: #E9EFF6;
 }
@@ -291,7 +306,6 @@ h2.title:hover:after {
           align-items: center;
   background-image: url(/assets/images/new-orange.jpg);
   background-size: cover;
-  background-position: bottom left left;
   background-repeat: no-repeat;
 }
 
