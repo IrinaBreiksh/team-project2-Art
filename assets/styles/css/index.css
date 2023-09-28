@@ -1,9 +1,9 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap");
-.footer__container, .header ul, .header {
+.footer__info, .header ul, .header {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .curses__container {
@@ -24,41 +24,53 @@
 body {
   font-family: "Roboto", sans-serif;
   font-size: 21px;
-  max-width: 1920px;
   margin: 0 auto;
+}
+body p {
+  color: #5a5a5a;
 }
 body li {
   list-style-type: none;
 }
 body a {
   text-decoration-line: none;
+  color: #5a5a5a;
 }
 body a:hover {
   color: #f1ad0c;
 }
 
 .header {
-  padding-top: 35px;
+  padding: 10px 1%;
   align-items: center;
-}
-.header p {
-  color: #000000;
+  background: #faf1ec;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
 }
 .header .header__logo {
+  display: flex;
+  flex-direction: row;
   text-align: center;
+  align-items: center;
 }
-.header .header__logo img {
-  width: 80px;
-  height: 80px;
-  justify-content: center;
+.header .header__logo .logo-img {
+  max-width: 80px;
+  max-height: 80px;
+  border-radius: 50%;
+  margin-right: 8px;
 }
-.header .header__logo span {
+.header .header__logo .logo-text {
   font-size: 27px;
   font-weight: 900;
 }
+.header ul:first-child {
+  padding-left: 0px;
+}
 .header li {
-  padding-right: 60px;
-  padding-left: 16px;
+  padding-right: 25px;
+  padding-left: 2px;
 }
 .header li .header__nav-dropdown {
   position: relative;
@@ -72,6 +84,7 @@ body a:hover {
   position: absolute;
   margin-bottom: 16px;
   min-width: 160px;
+  background: #f7e7e0;
 }
 .header li .header__nav-link-content a {
   color: #f1ad0c;
@@ -80,7 +93,7 @@ body a:hover {
   display: block;
 }
 .header li .header__nav-link-content a:hover {
-  color: #ebd9af;
+  color: #f07502;
 }
 
 /* Счетчик даты и времени */
@@ -97,12 +110,15 @@ body a:hover {
   box-shadow: 5px 5px #888888;
 }
 
+main {
+  padding-top: 240px;
+}
+
 /* Начало 1 блока */
 h2.title {
   font-size: 2em;
   color: #5a5a5a;
   text-align: center;
-  font-family: "Roboto", sans-serif;
   font-weight: 200;
   padding-bottom: 25px;
 }
@@ -110,7 +126,7 @@ h2.title {
 h2.title:before {
   content: "";
   display: block;
-  height: 2px;
+  height: 3px;
   background: #f66d52;
   width: 150px;
   margin: 0 auto 10px;
@@ -125,7 +141,7 @@ h2.title:hover:before {
 h2.title:after {
   content: "";
   display: block;
-  height: 2px;
+  height: 3px;
   background: #f66d52;
   width: 150px;
   margin: 10px auto 0;
@@ -145,8 +161,7 @@ h2.title:hover:after {
   display: grid;
   height: -moz-fit-content;
   height: fit-content;
-  padding: 5%;
-  max-width: 1200;
+  padding: 2%;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 25px;
@@ -199,7 +214,7 @@ h2.title:hover:after {
   font-weight: 600;
   font-size: 1em;
   transition: all 0.2s;
-  z-index: 1;
+  z-index: 0;
 }
 
 .gallery__title a {
@@ -214,6 +229,8 @@ h2.title:hover:after {
      object-fit: cover;
   border-radius: 3%;
   filter: grayscale(30%);
+  border-style: solid;
+  border-color: #f66d52;
   box-shadow: 6px 6px #888888;
 }
 
@@ -254,6 +271,8 @@ h2.title:hover:after {
   max-width: 50vw;
   align-items: center;
   margin: 30px auto 0;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 
 .team {
@@ -321,7 +340,10 @@ h2.title:hover:after {
   font-family: "Roboto", sans-serif;
   font-size: 21px;
   text-align: justify;
-  line-height: 35px;
+}
+
+.curses {
+  background-color: #E9EFF6;
 }
 
 .curses__container {
@@ -329,6 +351,12 @@ h2.title:hover:after {
   min-height: 40vw;
   align-items: center;
   margin: 30px auto 0;
+  background-color: #E9EFF6;
+  max-width: 50vw;
+  align-items: center;
+  margin: 30px auto 0;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 .curses__container img {
   width: 80%;
@@ -379,7 +407,7 @@ h2.title:hover:after {
 
 .form__form-inner input[type=submit] {
   margin-top: 30px;
-  background: #f69a73;
+  background: #f19533;
   border-bottom: 4px solid #d87d56;
   color: white;
   font-size: 14px;
@@ -387,7 +415,7 @@ h2.title:hover:after {
 }
 
 .form__form-inner input[type=submit]:hover {
-  background: #f7a988;
+  background: #eb2e0d;
 }
 
 .form__form-innertextarea {
@@ -429,11 +457,15 @@ h2.title:hover:after {
 }
 
 .footer {
-  background-color: #a3a2a2;
+  background-color: #faf1ec;
+  padding: 20px 40px 20px;
 }
-.footer__container {
-  padding: 50px 40px 20px;
-  justify-content: space-around;
+.footer__info {
+  align-items: center;
+}
+.footer__info-rights {
+  padding-top: 2vw;
+  font-size: small;
 }
 .footer__contacts {
   text-align: center;
@@ -447,16 +479,43 @@ h2.title:hover:after {
 
 .subscribe-form__button {
   width: 245px;
-  background: #f69a73;
+  background: #f19533;
   color: white;
   font-size: 14px;
   line-height: 40px;
   border-radius: 20px;
-  border-color: #f69a73;
+  border-color: #f19533;
   border-width: 0;
   border-bottom: 4px solid #d87d56;
   cursor: pointer;
 }
 .subscribe-form__button:hover {
-  background: #f7a988;
-}/*# sourceMappingURL=index.css.map */
+  background: #eb2e0d;
+}
+
+@media screen and (max-width: 1050px) {
+  .header {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+  .header .header__logo .logo-text {
+    font-size: 27px;
+    font-weight: 500;
+  }
+  .header li {
+    padding-right: 16px;
+    padding-left: 0px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header .header__logo img {
+    max-width: 60px;
+  }
+  .header .header__logo p {
+    font-size: 16px;
+  }
+  .header .header__logo .logo-text {
+    font-size: 21px;
+    font-weight: 900;
+  }
+}
