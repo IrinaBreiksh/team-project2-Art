@@ -298,7 +298,7 @@ h2.title:hover:after {
   grid-template-rows: repeat(2, 300px);
   justify-content: space-between;
   justify-items: stretch;
-  gap: 30px;
+  gap: 40px;
   align-items: center;
   background-image: url(/assets/images/new-orange.jpg);
   background-size: cover;
@@ -319,8 +319,9 @@ h2.title:hover:after {
 }
 
 .card-img-top:hover {
-  max-width: 250px;
-  max-height: 250px;
+    
+max-width: 190px;
+max-height: 190px;
 }
 
 .card-body {
@@ -353,6 +354,7 @@ h2.title:hover:after {
   font-family: $font-family;
   font-size: $font-size-text;
   text-align: justify;
+  line-height: 40px;
 }
 
 // Конец 2 блока  О нас и Наша команда
@@ -482,6 +484,7 @@ h2.title:hover:after {
 
 .p {
   font-size: small;
+  
 }
 
 // начало блока footer 
