@@ -434,7 +434,12 @@ max-height: 190px;
 * {
   box-sizing: border-box;
 }
-
+.form {
+   background-image: url(/assets/images/masks.jpg);
+ background-repeat: no-repeat;
+ background-size: cover;
+ background-position:  center;
+}
 .form__decor {
   position: relative;
   max-width: 45vw;
@@ -442,6 +447,8 @@ max-height: 190px;
   background: white;
   border-radius: 20px;
   padding-bottom: 2em;
+  opacity: 75%;
+  
 
 }
 

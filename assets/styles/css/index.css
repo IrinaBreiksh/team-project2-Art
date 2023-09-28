@@ -459,6 +459,13 @@ h2.title:hover:after {
           box-sizing: border-box;
 }
 
+.form {
+  background-image: url(/assets/images/masks.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 .form__decor {
   position: relative;
   max-width: 45vw;
@@ -466,6 +473,7 @@ h2.title:hover:after {
   background: white;
   border-radius: 20px;
   padding-bottom: 2em;
+  opacity: 75%;
 }
 
 .form__form-inner {
