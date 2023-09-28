@@ -340,6 +340,7 @@ h2.title:hover:after {
   font-family: "Roboto", sans-serif;
   font-size: 21px;
   text-align: justify;
+  line-height: 40px;
 }
 
 .curses {
@@ -518,4 +519,4 @@ h2.title:hover:after {
     font-size: 21px;
     font-weight: 900;
   }
-}
+}/*# sourceMappingURL=index.css.map */
