@@ -1,38 +1,22 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap");
 .footer__container, .header ul, .header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .curses__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .curses__container img {
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-style: solid;
   border-color: #f66d52;
-  -webkit-filter: grayscale(40%);
-          filter: grayscale(40%);
+  filter: grayscale(40%);
   border-radius: 3%;
 }
 
@@ -54,9 +38,7 @@ body a:hover {
 
 .header {
   padding-top: 35px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 .header p {
   color: #000000;
@@ -67,9 +49,7 @@ body a:hover {
 .header .header__logo img {
   width: 80px;
   height: 80px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 .header .header__logo span {
   font-size: 27px;
@@ -113,8 +93,7 @@ body a:hover {
   font-weight: 400;
   font-size: medium;
   border-style: ridge;
-  -webkit-box-shadow: 5px 5px #888888;
-          box-shadow: 5px 5px #888888;
+  box-shadow: 5px 5px #888888;
 }
 
 /* Начало 1 блока */
@@ -134,13 +113,11 @@ h2.title:before {
   background: #f66d52;
   width: 150px;
   margin: 0 auto 10px;
-  -webkit-transition: 1s;
   transition: 1s;
 }
 
 h2.title:hover:before {
   width: 250px;
-  -webkit-transition: ease-out 1s;
   transition: ease-out 1s;
 }
 
@@ -151,13 +128,11 @@ h2.title:after {
   background: #f66d52;
   width: 150px;
   margin: 10px auto 0;
-  -webkit-transition: 1s;
   transition: 1s;
 }
 
 h2.title:hover:after {
   width: 250px;
-  -webkit-transition: ease-out 1s;
   transition: ease-out 1s;
 }
 
@@ -167,8 +142,6 @@ h2.title:hover:after {
 
 .gallery__cards {
   display: grid;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
   height: fit-content;
   padding: 5%;
   max-width: 1200;
@@ -184,36 +157,31 @@ h2.title:hover:after {
 .gallery__cards-one {
   position: relative;
   grid-area: 1/1/3/3;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .gallery__cards-two {
   position: relative;
   grid-area: 1/3/2/4;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .gallery__cards-three {
   position: relative;
   grid-area: 1/4/2/5;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .gallery__cards-four {
   position: relative;
   grid-area: 2/3/3/4;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .gallery__cards-five {
   position: relative;
   grid-area: 2/4/3/5;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .gallery__cards-title {
@@ -223,7 +191,6 @@ h2.title:hover:after {
   left: 20px;
   font-weight: 600;
   font-size: 1em;
-  -webkit-transition: all 0.2s;
   transition: all 0.2s;
   z-index: 1;
 }
@@ -236,18 +203,14 @@ h2.title:hover:after {
 .gallery__img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 3%;
-  -webkit-filter: grayscale(30%);
-          filter: grayscale(30%);
-  -webkit-box-shadow: 6px 6px #888888;
-          box-shadow: 6px 6px #888888;
+  filter: grayscale(30%);
+  box-shadow: 6px 6px #888888;
 }
 
 .gallery__img:hover {
-  -webkit-filter: grayscale(0%) contrast(1.2);
-          filter: grayscale(0%) contrast(1.2);
+  filter: grayscale(0%) contrast(1.2);
 }
 
 .video {
@@ -260,9 +223,7 @@ h2.title:hover:after {
     max-width: 1200px;
     margin: 40px auto 0;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    -webkit-column-gap: 15px;
-       -moz-column-gap: 15px;
-            column-gap: 15px;
+    column-gap: 15px;
   }
 }
 @media screen and (max-width: 1115px) {
@@ -270,8 +231,7 @@ h2.title:hover:after {
     display: grid;
     max-width: 1115px;
     place-items: center;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     row-gap: 5px;
     grid-template-rows: repeat(auto-fit, minmax(250px, 1fr));
   }
@@ -282,9 +242,7 @@ h2.title:hover:after {
 
 .about {
   max-width: 50vw;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   margin: 30px auto 0;
 }
 
@@ -296,14 +254,10 @@ h2.title:hover:after {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   grid-template-rows: repeat(2, 300px);
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   justify-items: stretch;
   gap: 30px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   background-image: url(/assets/images/new-orange.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -316,11 +270,9 @@ h2.title:hover:after {
 .card-img-top {
   max-width: 200px;
   max-height: 200px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 3%;
-  -webkit-box-shadow: 6px 6px #888888;
-          box-shadow: 6px 6px #888888;
+  box-shadow: 6px 6px #888888;
 }
 
 .card-img-top:hover {
@@ -363,21 +315,22 @@ h2.title:hover:after {
 .curses__container {
   max-width: 50vw;
   min-height: 40vw;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   margin: 30px auto 0;
 }
 .curses__container img {
   width: 80%;
-  -webkit-box-shadow: 6px 6px #888888;
-          box-shadow: 6px 6px #888888;
+  box-shadow: 6px 6px #888888;
+}
+.curses__container p {
+  font-family: "Roboto", sans-serif;
+  font-size: 21px;
+  text-align: center;
 }
 
 /* начало формы отзыва */
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .form__decor {
@@ -394,9 +347,7 @@ h2.title:hover:after {
   border-radius: 5%;
   padding: 45px;
   display: flexbox;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 
 .form__form-inner input,
@@ -440,15 +391,11 @@ h2.title:hover:after {
 }
 
 .checkbox {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
   justify-self: flex-start;
 }
 
 .form__items {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   padding: 20px 20px;
   color: black;
@@ -474,8 +421,7 @@ h2.title:hover:after {
 }
 .footer__container {
   padding: 50px 40px 20px;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
 }
 .footer__contacts {
   text-align: center;
@@ -502,3 +448,5 @@ h2.title:hover:after {
 .subscribe-form__button:hover {
   background: #f7a988;
 }
+
+/*# sourceMappingURL=index.css.map */
