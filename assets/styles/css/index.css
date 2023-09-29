@@ -1,15 +1,28 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap");
 .footer__info, .header ul, .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .curses__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .curses__container img {
@@ -17,7 +30,8 @@
      object-fit: cover;
   border-style: solid;
   border-color: #f66d52;
-  filter: grayscale(40%);
+  -webkit-filter: grayscale(40%);
+          filter: grayscale(40%);
   border-radius: 3%;
 }
 
@@ -42,7 +56,9 @@ body a:hover {
 
 .header {
   padding: 10px 1%;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
   background: #faf1ec;
   position: sticky;
@@ -55,9 +71,14 @@ body a:hover {
 }
 .header .header__logo {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .header .header__logo .logo-img {
   max-width: 80px;
@@ -133,7 +154,8 @@ body a:hover {
     position: absolute;
     background-color: #f1f1f1;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
   }
   .header li a {
@@ -198,7 +220,8 @@ body a:hover {
   font-weight: 400;
   font-size: medium;
   border-style: ridge;
-  box-shadow: 5px 5px #888888;
+  -webkit-box-shadow: 5px 5px #888888;
+          box-shadow: 5px 5px #888888;
 }
 
 main {
@@ -221,11 +244,13 @@ h2.title:before {
   background: #f66d52;
   width: 150px;
   margin: 0 auto 10px;
+  -webkit-transition: 1s;
   transition: 1s;
 }
 
 h2.title:hover:before {
   width: 250px;
+  -webkit-transition: ease-out 1s;
   transition: ease-out 1s;
 }
 
@@ -236,11 +261,13 @@ h2.title:after {
   background: #f66d52;
   width: 150px;
   margin: 10px auto 0;
+  -webkit-transition: 1s;
   transition: 1s;
 }
 
 h2.title:hover:after {
   width: 250px;
+  -webkit-transition: ease-out 1s;
   transition: ease-out 1s;
 }
 
@@ -250,6 +277,7 @@ h2.title:hover:after {
 
 .gallery__cards {
   display: grid;
+  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   padding: 2%;
@@ -304,6 +332,7 @@ h2.title:hover:after {
   left: 20px;
   font-weight: 600;
   font-size: 1em;
+  -webkit-transition: all 0.2s;
   transition: all 0.2s;
   z-index: 0;
 }
@@ -326,7 +355,8 @@ h2.title:hover:after {
 }
 
 .gallery__img:hover {
-  filter: grayscale(0%) contrast(1.2);
+  -webkit-filter: grayscale(0%) contrast(1.2);
+          filter: grayscale(0%) contrast(1.2);
 }
 
 @media screen and (min-width: 920px) {
@@ -337,6 +367,7 @@ h2.title:hover:after {
     left: 20px;
     font-weight: 600;
     font-size: 1em;
+    -webkit-transition: all 0.2s;
     transition: all 0.2s;
     z-index: 0;
   }
@@ -352,6 +383,7 @@ h2.title:hover:after {
     left: 10px;
     font-weight: 200;
     font-size: x-small;
+    -webkit-transition: all 0.2s;
     transition: all 0.2s;
     z-index: 0;
   }
@@ -364,6 +396,7 @@ h2.title:hover:after {
     left: 10px;
     font-weight: 200;
     font-size: 5px;
+    -webkit-transition: all 0.2s;
     transition: all 0.2s;
     z-index: 0;
   }
@@ -425,7 +458,9 @@ h2.title:hover:after {
 
 .about {
   max-width: 50vw;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 30px auto 0;
   padding-top: 25px;
   padding-bottom: 25px;
@@ -439,10 +474,14 @@ h2.title:hover:after {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   grid-template-rows: repeat(2, 300px);
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   justify-items: stretch;
   gap: 40px;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-image: url(/assets/images/new-orange.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -458,7 +497,8 @@ h2.title:hover:after {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 3%;
-  box-shadow: 6px 6px #888888;
+  -webkit-box-shadow: 6px 6px #888888;
+          box-shadow: 6px 6px #888888;
 }
 
 .card-img-top:hover {
@@ -506,7 +546,9 @@ h2.title:hover:after {
 .curses__container {
   max-width: 50vw;
   min-height: 40vw;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 30px auto 0;
   background-color: #E9EFF6;
   max-width: 50vw;
@@ -517,7 +559,8 @@ h2.title:hover:after {
 }
 .curses__container img {
   width: 80%;
-  box-shadow: 6px 6px #888888;
+  -webkit-box-shadow: 6px 6px #888888;
+          box-shadow: 6px 6px #888888;
 }
 .curses__container p {
   font-family: "Roboto", sans-serif;
@@ -527,7 +570,8 @@ h2.title:hover:after {
 
 /* начало формы отзыва */
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 @media screen and (min-width: 601px) {
@@ -704,7 +748,9 @@ h2.title:hover:after {
   padding: 20px;
 }
 .footer__info {
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .footer__info-address span {
   font-weight: 900;
