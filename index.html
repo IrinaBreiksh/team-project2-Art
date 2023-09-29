@@ -35,20 +35,26 @@
 
 <body>
   <header class="header">
-    <a href="https://vk.com/public214404468" target="_blank"><div class="header__logo">
-        <img class="logo-img" src="./assets/images/Main-logo-art.png" alt="logo-art" />
+    <a href="https://vk.com/public214404468" target="_blank">
+      <div class="header__logo">
         
+        <img class="logo-img" src="./assets/images/Main-logo-art.png" alt="logo-art" />
+      
         <div>
-        <p class="logo-text">Центр творчества «ИСКУССТВО»</p>
-          <p >Автономная некоммерческая организация
-        </p>
-      </div>
+          <p class="logo-text">Центр творчества «ИСКУССТВО»</p>
+          <p  class="logo-name" >Автономная некоммерческая организация
+          </p>
+        </div>
     </div>
     </a>
-    <nav>
-      <ul>
+    <nav class="header__nav">
+
+      <input class="side-menu" type="checkbox" id="side-menu"/>
+      <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+
+      <ul class="header__nav-menu">
         <li>
-          <div class="header__nav-dropdown">
+          <div class="header__nav-dropdown ">
             <a name="main" class="header__nav-name" href="#about">О нас</a>
             <div class="header__nav-link-content">
               <a href="#about">Чем мы занимаемся</a>
@@ -61,7 +67,10 @@
         <li><a href="#contacts">Контакты</a></li>
       </ul>
     </nav>
-    <div>
+    
+    
+    
+    <div class="header__socials">
       <a href="https://vk.com/public214404468">
         <svg width="66" height="66" viewBox="0 0 66 66" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
@@ -301,17 +310,17 @@
 
     <!-- начало 3 блока Курсы -->
     <section class="about_us">
-     <div class="curses__container">
+      <div class="curses__container">
       <h2 class="title"><a name="theatre" href="https://vk.com/public214404468">Театральная студия</a></h2>
       <!-- можно будет переделать в ссылку -->
       <img src="./assets/images/comanda.jpg" alt="Театральная команда">
       <p class="text_about">Открыт набор желающих во взрослую группу для новичков. 
         В программе:
-           основы актерского мастерства, словесное действие,
-         репетиции и участие в театрализованных постановках, 
+        основы актерского мастерства, словесное действие,
+        репетиции и участие в театрализованных постановках, 
           участие в социально-значимых проектах</p>
-     </div>
-      </section>
+      </div>
+    </section>
 
     <!-- конец 3 блока Курсы -->
 
@@ -360,17 +369,16 @@
     <!--конец формы Отзыва--->
   </main>
   <footer class="footer">
-    <!-- <div class="footer__container"> -->
-      <div class="footer__info">
-      <div class="footer__address">
+    <div class="footer__info">
+      <div class="footer__info-address">
         <p>Автономная некоммерческая организация<br>
-          Центр творчества «ИСКУССТВО»</p>
+          <span>Центр творчества «ИСКУССТВО»</span></p>
         <p>г.Артём, Приморский край</p>
-        <p class="footer__info-rights">
+        <p class="rights">
           &#169; created by <a href="https://itgirlschool.com/">  ITGIRLS</a>
         </p>
       </div>
-      <div class="footer__menu">
+      <div class="footer__info-menu">
         <ul>
           <li><a href="#main">Главная</a></li>
           <li><a href="#about">О нас</a></li>
@@ -378,7 +386,7 @@
           <li><a href="#theatre">Театральная студия</a></li>
         </ul>
       </div>
-      <div class="footer__contacts">
+      <div class="footer__info-contacts">
         <a name="contacts" href="https://vk.com/public214404468">
           <svg width="66" height="66" viewBox="0 0 66 66" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -399,9 +407,7 @@
           <button class="subscribe-form__button">Подписаться</button>
         </form>
       </div>
-      </div>
-      
-    <!-- </div> -->
+    </div>
   </footer>
 </body>
 
