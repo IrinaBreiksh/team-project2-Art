@@ -1,28 +1,15 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap");
 .footer__info, .header ul, .header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 .curses__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .curses__container img {
@@ -30,8 +17,7 @@
      object-fit: cover;
   border-style: solid;
   border-color: #f66d52;
-  -webkit-filter: grayscale(40%);
-          filter: grayscale(40%);
+  filter: grayscale(40%);
   border-radius: 3%;
 }
 
@@ -56,33 +42,27 @@ body a:hover {
 
 .header {
   padding: 10px 1%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
+  text-align: center;
   background: #faf1ec;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1;
 }
+.header .side-menu {
+  display: none;
+}
 .header .header__logo {
-  display: -webkit-box;
-  display: -ms-flexbox;
+  width: 100%;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  text-align: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-around;
+  align-items: center;
 }
 .header .header__logo .logo-img {
   max-width: 80px;
-  max-height: 80px;
   border-radius: 50%;
-  margin-right: 8px;
+  padding: 5px;
 }
 .header .header__logo .logo-text {
   font-size: 27px;
@@ -98,6 +78,7 @@ body a:hover {
 .header li .header__nav-dropdown {
   position: relative;
   display: inline-block;
+  text-align: left;
 }
 .header li .header__nav-dropdown:hover .header__nav-link-content {
   display: block;
@@ -119,6 +100,93 @@ body a:hover {
   color: #f07502;
 }
 
+@media screen and (max-width: 1050px) {
+  .header {
+    font-size: 16px;
+  }
+  .header .header__logo .logo-text {
+    font-size: 21px;
+    font-weight: 900;
+  }
+  .header li {
+    padding-left: 16px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .header .header__logo .logo-img {
+    max-width: 60px;
+    margin-right: 15px;
+  }
+  .header .header__nav {
+    position: relative;
+    display: inline-block;
+    text-align: left;
+  }
+  .header .header__nav:hover header__nav-menu {
+    display: block;
+  }
+  .header .header__nav:hover .side-menu {
+    background-color: #3e8e41;
+  }
+  .header li {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  .header li a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  .header li a:hover {
+    background-color: #ddd;
+  }
+  .header__nav-link-content {
+    display: none;
+  }
+  .header__socials {
+    display: none;
+  }
+  .hamb-line {
+    background: #5a5a5a;
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 35px;
+  }
+  .hamb-line::before,
+  .hamb-line::after {
+    background: #5a5a5a;
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+  }
+  .hamb-line::before {
+    top: 5px;
+  }
+  .hamb-line::after {
+    top: -5px;
+  }
+  .side-menu {
+    display: none;
+  }
+  .hamb {
+    cursor: pointer;
+    float: right;
+    padding: 40px 20px;
+  }
+}
+@media screen and (max-width: 605px) {
+  .logo-name {
+    display: none;
+  }
+}
 /* Счетчик даты и времени */
 .date {
   text-align: end;
@@ -130,12 +198,11 @@ body a:hover {
   font-weight: 400;
   font-size: medium;
   border-style: ridge;
-  -webkit-box-shadow: 5px 5px #888888;
-          box-shadow: 5px 5px #888888;
+  box-shadow: 5px 5px #888888;
 }
 
 main {
-  padding-top: 240px;
+  padding-top: 220px;
 }
 
 /* Начало 1 блока */
@@ -154,13 +221,11 @@ h2.title:before {
   background: #f66d52;
   width: 150px;
   margin: 0 auto 10px;
-  -webkit-transition: 1s;
   transition: 1s;
 }
 
 h2.title:hover:before {
   width: 250px;
-  -webkit-transition: ease-out 1s;
   transition: ease-out 1s;
 }
 
@@ -171,13 +236,11 @@ h2.title:after {
   background: #f66d52;
   width: 150px;
   margin: 10px auto 0;
-  -webkit-transition: 1s;
   transition: 1s;
 }
 
 h2.title:hover:after {
   width: 250px;
-  -webkit-transition: ease-out 1s;
   transition: ease-out 1s;
 }
 
@@ -187,10 +250,8 @@ h2.title:hover:after {
 
 .gallery__cards {
   display: grid;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  max-width: 1920px;
   padding: 2%;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
@@ -243,7 +304,6 @@ h2.title:hover:after {
   left: 20px;
   font-weight: 600;
   font-size: 1em;
-  -webkit-transition: all 0.2s;
   transition: all 0.2s;
   z-index: 0;
 }
@@ -259,16 +319,13 @@ h2.title:hover:after {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 3%;
-  -webkit-filter: grayscale(30%);
-          filter: grayscale(30%);
+  filter: grayscale(30%);
   border-style: solid;
-  -webkit-box-shadow: 6px 6px #888888;
-          box-shadow: 6px 6px #888888;
+  box-shadow: 6px 6px #888888;
 }
 
 .gallery__img:hover {
-  -webkit-filter: grayscale(0%) contrast(1.2);
-          filter: grayscale(0%) contrast(1.2);
+  filter: grayscale(0%) contrast(1.2);
 }
 
 @media screen and (min-width: 920px) {
@@ -279,12 +336,14 @@ h2.title:hover:after {
     left: 20px;
     font-weight: 600;
     font-size: 1em;
-    -webkit-transition: all 0.2s;
     transition: all 0.2s;
     z-index: 0;
   }
 }
 @media screen and (max-width: 919px) {
+  main {
+    padding-top: 128px;
+  }
   .gallery__cards-title {
     position: absolute;
     background-color: aliceblue;
@@ -292,7 +351,6 @@ h2.title:hover:after {
     left: 10px;
     font-weight: 200;
     font-size: x-small;
-    -webkit-transition: all 0.2s;
     transition: all 0.2s;
     z-index: 0;
   }
@@ -305,7 +363,6 @@ h2.title:hover:after {
     left: 10px;
     font-weight: 200;
     font-size: 5px;
-    -webkit-transition: all 0.2s;
     transition: all 0.2s;
     z-index: 0;
   }
@@ -321,9 +378,8 @@ h2.title:hover:after {
     max-width: 1200px;
     margin: 40px auto 0;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    -webkit-column-gap: 15px;
-       -moz-column-gap: 15px;
-            column-gap: 15px;
+    -moz-column-gap: 15px;
+         column-gap: 15px;
   }
 }
 @media screen and (max-width: 1115px) {
@@ -343,9 +399,7 @@ h2.title:hover:after {
 
 .about {
   max-width: 50vw;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   margin: 30px auto 0;
   padding-top: 25px;
   padding-bottom: 25px;
@@ -359,14 +413,10 @@ h2.title:hover:after {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   grid-template-rows: repeat(2, 300px);
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   justify-items: stretch;
   gap: 40px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   background-image: url(/assets/images/new-orange.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -382,8 +432,7 @@ h2.title:hover:after {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 3%;
-  -webkit-box-shadow: 6px 6px #888888;
-          box-shadow: 6px 6px #888888;
+  box-shadow: 6px 6px #888888;
 }
 
 .card-img-top:hover {
@@ -431,9 +480,7 @@ h2.title:hover:after {
 .curses__container {
   max-width: 50vw;
   min-height: 40vw;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   margin: 30px auto 0;
   background-color: #E9EFF6;
   max-width: 50vw;
@@ -444,8 +491,7 @@ h2.title:hover:after {
 }
 .curses__container img {
   width: 80%;
-  -webkit-box-shadow: 6px 6px #888888;
-          box-shadow: 6px 6px #888888;
+  box-shadow: 6px 6px #888888;
 }
 .curses__container p {
   font-family: "Roboto", sans-serif;
@@ -455,8 +501,7 @@ h2.title:hover:after {
 
 /* начало формы отзыва */
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .form {
@@ -481,9 +526,7 @@ h2.title:hover:after {
   border-radius: 5%;
   padding: 45px;
   display: flexbox;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 
 .form__form-inner input,
@@ -527,15 +570,11 @@ h2.title:hover:after {
 }
 
 .checkbox {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
   justify-self: flex-start;
 }
 
 .form__items {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   padding: 20px 20px;
   color: black;
@@ -558,14 +597,15 @@ h2.title:hover:after {
 
 .footer {
   background-color: #faf1ec;
-  padding: 20px 40px 20px;
+  padding: 20px;
 }
 .footer__info {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
-.footer__info-rights {
+.footer__info-address span {
+  font-weight: 900;
+}
+.footer__info-address .rights {
   padding-top: 2vw;
   font-size: small;
 }
@@ -596,28 +636,18 @@ h2.title:hover:after {
 }
 
 @media screen and (max-width: 1050px) {
-  .header {
-    padding-left: 2%;
-    padding-right: 2%;
+  .footer {
+    font-size: 16px;
   }
-  .header .header__logo .logo-text {
-    font-size: 27px;
-    font-weight: 500;
-  }
-  .header li {
-    padding-right: 16px;
-    padding-left: 0px;
+  .subscribe-form__button {
+    width: 180px;
   }
 }
 @media screen and (max-width: 768px) {
-  .header .header__logo img {
-    max-width: 60px;
-  }
-  .header .header__logo p {
+  .footer {
     font-size: 16px;
   }
-  .header .header__logo .logo-text {
-    font-size: 21px;
-    font-weight: 900;
+  .subscribe-form__button {
+    width: 110px;
   }
 }
