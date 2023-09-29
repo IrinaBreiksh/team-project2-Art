@@ -30,11 +30,10 @@ body {
   align-items: center;
   text-align: center;
   background: #faf1ec;
-  position: fixed;
+  position: sticky;
   top: 0;
   width: 100%;
   z-index: 1;
-  
   
   .side-menu{
     display: none;
@@ -56,7 +55,6 @@ body {
     .logo-text {
       font-size: $font-size-title;
       font-weight: 900;
-      // padding-bottom: 5px;
     }
   }
 
@@ -118,7 +116,7 @@ body {
     }
   
     li {
-      padding-left: 16px;
+      padding-left: 8px;
     }
   }
   
@@ -127,7 +125,7 @@ body {
 @media screen and (max-width: 767px){
   .header {
     @extend %flex-element-row;
-
+    
     .header__logo {
       .logo-img {
         max-width: 60px;
@@ -239,7 +237,7 @@ body {
 }
 
 main{
-  padding-top: 220px;
+  padding-top: 20px;
 }
 /* Начало 1 блока */
 
@@ -374,7 +372,7 @@ h2.title:hover:after {
 }}
 @media screen and (max-width: 919px){
   main {
-    padding-top: 128px;
+    padding-top: 10px;
 }
 
 .gallery__cards-title {
@@ -558,10 +556,10 @@ max-height: 190px;
   box-sizing: border-box;
 }
 .form {
-   background-image: url(/assets/images/masks.jpg);
- background-repeat: no-repeat;
- background-size: cover;
- background-position:  center;
+  background-image: url(./assets/images/masks.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position:  center;
 }
 .form__decor {
   position: relative;
@@ -678,7 +676,7 @@ max-height: 190px;
     
   }
 
-  &__contacts {
+  &__info-contacts {
     text-align: center;
   }
 
@@ -715,10 +713,6 @@ max-height: 190px;
     font-size: $font-size-phone;
   }
 
-  // .footer__contacts{
-  //   max-width: 30%;
-  // }
-
   .subscribe-form__button {
     width: 180px; 
   }
@@ -729,8 +723,13 @@ max-height: 190px;
     font-size: $font-size-phone;
   }
 
+  .footer__info-menu{
+    display: none;
+  }
+
   .subscribe-form__button {
     width: 110px; 
   }
 }
+
 

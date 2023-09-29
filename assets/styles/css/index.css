@@ -45,7 +45,7 @@ body a:hover {
   align-items: center;
   text-align: center;
   background: #faf1ec;
-  position: fixed;
+  position: sticky;
   top: 0;
   width: 100%;
   z-index: 1;
@@ -109,7 +109,7 @@ body a:hover {
     font-weight: 900;
   }
   .header li {
-    padding-left: 16px;
+    padding-left: 8px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -202,7 +202,7 @@ body a:hover {
 }
 
 main {
-  padding-top: 220px;
+  padding-top: 20px;
 }
 
 /* Начало 1 блока */
@@ -342,7 +342,7 @@ h2.title:hover:after {
 }
 @media screen and (max-width: 919px) {
   main {
-    padding-top: 128px;
+    padding-top: 10px;
   }
   .gallery__cards-title {
     position: absolute;
@@ -505,7 +505,7 @@ h2.title:hover:after {
 }
 
 .form {
-  background-image: url(/assets/images/masks.jpg);
+  background-image: url(./assets/images/masks.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -609,7 +609,7 @@ h2.title:hover:after {
   padding-top: 2vw;
   font-size: small;
 }
-.footer__contacts {
+.footer__info-contacts {
   text-align: center;
 }
 .footer ul {
@@ -646,6 +646,9 @@ h2.title:hover:after {
 @media screen and (max-width: 768px) {
   .footer {
     font-size: 16px;
+  }
+  .footer__info-menu {
+    display: none;
   }
   .subscribe-form__button {
     width: 110px;
