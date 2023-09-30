@@ -320,7 +320,7 @@ h2.title:hover:after {
      object-fit: cover;
   border-radius: 3%;
   filter: grayscale(30%);
-  box-shadow: 6px 6px #888888;
+  box-shadow: 6px 6px #f66d52;
 }
 
 .gallery__img:hover {
@@ -558,10 +558,8 @@ h2.title:hover:after {
     margin: 30px auto 0;
     background: white;
     border-radius: 20px;
-    padding-bottom: 2em;
-    opacity: 75%;
   }
-  .form__form-inner {
+    .form__form-inner {
     border: 5px solid #F2F2F2;
     border-radius: 5%;
     padding: 45px;
@@ -639,7 +637,6 @@ h2.title:hover:after {
     margin: 25px auto 0;
     background: white;
     border-radius: 20px;
-    padding-bottom: 2em;
   }
   .form__form-inner {
     border: 5px solid #F2F2F2;
