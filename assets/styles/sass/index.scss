@@ -459,7 +459,7 @@ h2.title:hover:after {
 }
 
 .about {
-  max-width: 50vw;
+  max-width: 70vw;
   align-items: center;
   margin: 30px auto 0;
   padding-top: 25px;
@@ -482,10 +482,14 @@ h2.title:hover:after {
   background-image: url(/assets/images/new-orange.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  padding-top: 4%;    
+  padding-bottom: 4%
 }
 
 .card {
-  text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .card-img-top {
@@ -493,7 +497,7 @@ h2.title:hover:after {
   max-height: 200px;
   object-fit: cover;
   border-radius: 3%;
-  box-shadow: 6px 6px #888888;
+  box-shadow: 6px 6px #f66d52;
 
 }
 
@@ -504,8 +508,7 @@ max-height: 190px;
 }
 
 .card-body {
-  margin-left: 10px;
-  margin-right: 10px;
+    margin: 10px; 
 }
 
 .card-title {
@@ -533,10 +536,26 @@ max-height: 190px;
   font-family: $font-family;
   font-size: $font-size-text;
   text-align: justify;
-  line-height: 40px;
+  line-height: 35px;
 }
 
 // Конец 2 блока  О нас и Наша команда
+
+//Начало Адаптив текста блоков 2 и 3
+@media screen and (max-width: 710px) {
+    p.text_about {
+    
+        font-size: 0.8em;
+        text-align: initial;
+        line-height: 25px;
+        }
+    h2.title {
+            font-size: 1.5em;
+    
+        }
+
+}
+//Конец Адаптив текста блоков 2 и 3
 
 // начало 3 блока Курсы
 .curses{
@@ -544,13 +563,13 @@ max-height: 190px;
 }
 .curses__container {
   @extend %flex-element-column;
-  max-width: 50vw;
+  max-width: 70vw;
   min-height: 40vw;
   align-items: center;
   margin: 30px auto 0;
   
   background-color: #E9EFF6;
-  max-width: 50vw;
+  max-width: 70vw;
   align-items: center;
   margin: 30px auto 0;
   padding-top: 25px;
@@ -562,11 +581,23 @@ max-height: 190px;
     box-shadow: 6px 6px #888888;
   }
 
-  p {
-    font-family: $font-family;
-    font-size: $font-size-text;
+//    p {
+//     font-family: $font-family;
+//     font-size: $font-size-text;
+//     text-align: justify;
+//   }
+}
+
+.title_curses {
+    // padding: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    color: #5a5a5a;
     text-align: center;
-  }
 }
 
 
