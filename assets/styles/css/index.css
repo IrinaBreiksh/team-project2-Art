@@ -60,9 +60,9 @@ body a:hover {
   align-items: center;
 }
 .header .header__logo .logo-img {
-  max-width: 80px;
+  max-width: 120px;
   border-radius: 50%;
-  padding: 5px;
+  padding: 15px;
 }
 .header .header__logo .logo-text {
   font-size: 27px;
@@ -100,9 +100,13 @@ body a:hover {
   color: #f07502;
 }
 
-@media screen and (max-width: 1050px) {
+#menu__toggle {
+  display: none;
+}
+
+@media screen and (max-width: 1020px) {
   .header {
-    font-size: 16px;
+    font-size: 21px;
   }
   .header .header__logo .logo-text {
     font-size: 21px;
@@ -111,80 +115,123 @@ body a:hover {
   .header li {
     padding-left: 8px;
   }
+  .header .header__socials {
+    display: none;
+  }
+}
+@media screen and (max-width: 910px) {
+  .header {
+    font-size: 14px;
+  }
 }
 @media screen and (max-width: 767px) {
+  .header .header__logo {
+    margin-left: -30px;
+  }
   .header .header__logo .logo-img {
-    max-width: 60px;
-    margin-right: 15px;
+    padding-right: 10px;
   }
-  .header .header__nav {
-    position: relative;
-    display: inline-block;
-    text-align: left;
-  }
-  .header .header__nav:hover header__nav-menu {
+  .header ul {
     display: block;
   }
-  .header .header__nav:hover .side-menu {
-    background-color: #3e8e41;
-  }
-  .header li {
+  .header .header__socials {
     display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  }
+  #menu__toggle {
+    opacity: 0;
+  }
+  #menu__toggle:checked ~ .menu__btn > span {
+    transform: rotate(45deg);
+  }
+  #menu__toggle:checked ~ .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0);
+  }
+  #menu__toggle:checked ~ .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+  #menu__toggle:checked ~ .header__nav-menu {
+    visibility: visible;
+    right: 0;
+  }
+  .menu__btn {
+    background-color: #f19533;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 12%;
+    right: 10%;
+    width: 60px;
+    height: 40px;
+    cursor: pointer;
     z-index: 1;
   }
-  .header li a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
+  .menu__btn > span,
+  .menu__btn > span::before,
+  .menu__btn > span::after {
     display: block;
-  }
-  .header li a:hover {
-    background-color: #ddd;
-  }
-  .header__nav-link-content {
-    display: none;
-  }
-  .header__socials {
-    display: none;
-  }
-  .hamb-line {
-    background: #5a5a5a;
-    display: block;
-    height: 2px;
-    position: relative;
-    width: 35px;
-  }
-  .hamb-line::before,
-  .hamb-line::after {
-    background: #5a5a5a;
-    content: "";
-    display: block;
-    height: 100%;
     position: absolute;
     width: 100%;
+    height: 2px;
+    background-color: #616161;
+    transition-duration: 0.25s;
   }
-  .hamb-line::before {
-    top: 5px;
+  .menu__btn > span::before {
+    content: "";
+    top: -8px;
   }
-  .hamb-line::after {
-    top: -5px;
+  .menu__btn > span::after {
+    content: "";
+    top: 8px;
   }
-  .side-menu {
-    display: none;
+  .header__nav-menu {
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    right: 100%;
+    width: 225px;
+    height: 100%;
+    margin: 0;
+    padding: 100px 0;
+    background-color: #ECEFF1;
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
+    transition-duration: 0.25s;
   }
-  .hamb {
-    cursor: pointer;
-    float: right;
-    padding: 40px 20px;
+  .header__nav-item {
+    display: block;
+    padding: 12px 24px;
+    color: #5a5a5a;
+    font-size: 20px;
+    font-weight: 400;
+    transition-duration: 0.25s;
+  }
+  .header__nav-item:hover {
+    background-color: #CFD8DC;
   }
 }
 @media screen and (max-width: 605px) {
   .logo-name {
     display: none;
+  }
+}
+@media screen and (max-width: 580px) {
+  .logo-text {
+    max-width: -moz-min-content;
+    max-width: min-content;
+  }
+}
+@media screen and (max-width: 440px) {
+  .header .header__logo .logo-img {
+    width: 50%;
+    margin-left: 5%;
+  }
+  .header .header__logo .logo-text {
+    font-size: 14px;
+  }
+  .header .menu__btn {
+    top: 8%;
   }
 }
 /* Счетчик даты и времени */
@@ -256,7 +303,7 @@ h2.title:hover:after {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 25px;
-  background-image: url(/assets/images/new-orange.jpg);
+  background-image: url(../../images/new-orange.jpg);
   background-size: cover;
   background-position: bottom left left;
   background-repeat: no-repeat;
@@ -439,7 +486,7 @@ h2.title:hover:after {
   justify-items: stretch;
   gap: 40px;
   align-items: center;
-  background-image: url(/assets/images/new-orange.jpg);
+  background-image: url(../../images/new-orange.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   padding-top: 4%;
@@ -547,7 +594,7 @@ h2.title:hover:after {
 
 @media screen and (min-width: 601px) {
   .form {
-    background-image: url(/assets/images/masks.jpg);
+    background-image: url(../../images/masks.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center bottom;
@@ -667,7 +714,7 @@ h2.title:hover:after {
     background: #f19533;
     border-bottom: 4px solid #d87d56;
     color: white;
-    font-size: 8px;
+    font-size: 14px;
     width: 70%;
   }
   .form__form-inner input[type=submit]:hover {
@@ -704,10 +751,11 @@ h2.title:hover:after {
 }
 .footer {
   background-color: #faf1ec;
-  padding: 20px;
+  padding: 10px;
 }
 .footer__info {
   align-items: center;
+  margin-left: 1%;
 }
 .footer__info-address span {
   font-weight: 900;
@@ -733,7 +781,7 @@ h2.title:hover:after {
   font-size: 14px;
   line-height: 40px;
   border-radius: 20px;
-  border-color: #f19533;
+  border-color: #d87d56;
   border-width: 0;
   border-bottom: 4px solid #d87d56;
   cursor: pointer;
@@ -744,15 +792,20 @@ h2.title:hover:after {
 
 @media screen and (max-width: 1050px) {
   .footer {
-    font-size: 16px;
+    font-size: 21px;
   }
   .subscribe-form__button {
-    width: 180px;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 910px) {
+  .footer {
+    font-size: 14px;
   }
 }
 @media screen and (max-width: 768px) {
   .footer {
-    font-size: 16px;
+    font-size: 14px;
   }
   .footer__info-menu {
     display: none;
@@ -760,4 +813,7 @@ h2.title:hover:after {
   .subscribe-form__button {
     width: 110px;
   }
-}/*# sourceMappingURL=index.css.map */
+  .footer__info-contacts {
+    max-width: 35%;
+  }
+}
